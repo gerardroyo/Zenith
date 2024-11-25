@@ -1,4 +1,4 @@
-# Selenium GRP Framework
+# Zenith
 
 ## Índice
 - [Descripción](#descripción)
@@ -13,7 +13,7 @@
 - [Planes futuros](#planes-futuros)
 
 ## Descripción
-**Selenium GRP Framework** es un framework de automatización personalizado diseñado para agilizar el proceso de configuración y preparación en proyectos de QA. Este framework está listo para ser clonado desde GitHub y comenzar a automatizar sin necesidad de configuraciones adicionales, sirviendo también como plantilla para futuros proyectos.
+**Zenith** es un framework de automatización personalizado diseñado para agilizar el proceso de configuración y preparación en proyectos de QA. Este framework está listo para ser clonado desde GitHub y comenzar a automatizar sin necesidad de configuraciones adicionales, sirviendo también como plantilla para futuros proyectos.
 
 El objetivo principal es ahorrar tiempo en la preparación y configuración del entorno de pruebas, permitiendo a los equipos de QA enfocarse en la automatización desde el primer momento.
 
@@ -147,4 +147,4 @@ Este proyecto está licenciado bajo la MIT License.
 
 ---
 
-¡Gracias por utilizar Selenium GRP Framework! Si tienes alguna sugerencia o encuentras algún problema, no dudes en contactar.
+¡Gracias por utilizar Zenith! Si tienes alguna sugerencia o encuentras algún problema, no dudes en contactar.
