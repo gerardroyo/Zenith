@@ -11,6 +11,7 @@ public class PaginaPrincipal extends BasePage {
     //Metodo para navegar a www.freerangetesters.com
     public void navegarAFreeRangeTesters(){
         navegarA("https://www.freerangetesters.com");
+        clickElement(botonAcceder);
     }
 
 }
