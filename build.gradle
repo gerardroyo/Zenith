@@ -20,19 +20,22 @@ dependencies {
     testImplementation libs.junit.jupiter
 
     // https://mvnrepository.com/artifact/org.seleniumhq.selenium/selenium-java
-    implementation 'org.seleniumhq.selenium:selenium-java:4.26.0'
+    implementation group: 'org.seleniumhq.selenium', name: 'selenium-java', version: '4.28.1'
 
     // https://mvnrepository.com/artifact/io.github.bonigarcia/webdrivermanager
-    implementation 'io.github.bonigarcia:webdrivermanager:5.9.2'
+    implementation group: 'io.github.bonigarcia', name: 'webdrivermanager', version: '5.9.2'
+
 
     // https://mvnrepository.com/artifact/org.testng/testng
     testImplementation 'org.testng:testng:7.10.2'
 
     // https://mvnrepository.com/artifact/io.cucumber/cucumber-java
-    implementation 'io.cucumber:cucumber-java:7.20.1'
+    implementation group: 'io.cucumber', name: 'cucumber-java', version: '7.21.1'
+
 
     // https://mvnrepository.com/artifact/io.cucumber/cucumber-junit
-    testImplementation 'io.cucumber:cucumber-junit:7.20.1'
+    testImplementation group: 'io.cucumber', name: 'cucumber-junit', version: '7.21.1'
+
 }
 
 tasks.named('test') {
