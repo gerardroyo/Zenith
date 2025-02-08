@@ -59,6 +59,7 @@ El objetivo principal es ahorrar tiempo en la preparación y configuración del 
   - [IntelliCode](https://marketplace.visualstudio.com/items?itemName=VisualStudioExptTeam.vscodeintellicode)
   - [Language Support for Java(TM) by Red Hat](https://marketplace.visualstudio.com/items?itemName=redhat.java)
   - [Project Manager for Java](https://marketplace.visualstudio.com/items?itemName=vscjava.vscode-project-manager)
+  - [Snippets and Syntax Highlight for Gherkin (Cucumber)](https://marketplace.visualstudio.com/items?itemName=stevejpurves.cucumber)
 
 ## Instalación
 
