@@ -2,7 +2,7 @@ package pages;
 
 public class PaginaPrincipal extends BasePage {
 
-    private String botonAcceder = "//a[@href='https://www.freerangetesters.com/nivel-inicial-fundamentos-del-testing']";
+    private String linkSeccion = "//a[normalize-space()='%s' and @href]";
 
     public PaginaPrincipal(){
         super(driver);
@@ -11,7 +11,12 @@ public class PaginaPrincipal extends BasePage {
     //Metodo para navegar a www.freerangetesters.com
     public void navegarAFreeRangeTesters(){
         navegarA("https://www.freerangetesters.com");
-        clickElement(botonAcceder);
+    }
+
+    public void clickSeccionBarraNavegacion(String seccion) {
+        //Reemplazar el marcador de posición en linkSeccion con el nombre
+        String xpathString = String.format(linkSeccion, seccion);
+        clickElement(xpathString);
     }
 
 }
