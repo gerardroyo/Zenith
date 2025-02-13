@@ -2,9 +2,11 @@ package pages;
 
 // Importaciones necesarias
 import java.time.Duration;
+import java.util.ArrayList;
 import java.util.List;
 
 import org.openqa.selenium.By;
+import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
@@ -97,6 +99,45 @@ public class BasePage {
         List<WebElement> dropdownOption = dropdown.getOptions();
 
         return dropdownOption.size();
+    }
+
+    // Este metodo devuelve todos los valores en formato texto de los que hay en un dropdown
+    public List<String> getDropdownValores(String locator) {
+        Select dropdown = new Select(Find(locator));
+
+        List<WebElement> opcionesDropdown = dropdown.getOptions();
+        List<String> valores = new ArrayList<>();
+        for (WebElement opcion : opcionesDropdown) {
+            valores.add(opcion.getText());
+        }
+        return valores;
+    }
+
+    // Método para hacer scroll hasta un elemento
+    public void scrollToElement(String locator) {
+        WebElement element = Find(locator);
+        ((JavascriptExecutor) driver).executeScript("arguments[0].scrollIntoView(true);", element);
+    }
+
+    // Método para obtener el identificador de la ventana actual
+    public String getCurrentWindowHandle() {
+        return driver.getWindowHandle();
+    }
+
+    // Método para cambiar a una nueva ventana
+    public void switchToNewWindow(String originalWindowHandle) {
+        WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(10));
+        
+        // Espera a que haya una nueva ventana
+        wait.until(ExpectedConditions.numberOfWindowsToBe(2));
+        
+        // Obtiene todos los identificadores de ventanas abiertas
+        for (String windowHandle : driver.getWindowHandles()) {
+            if (!windowHandle.equals(originalWindowHandle)) {
+                driver.switchTo().window(windowHandle); // Cambia a la nueva ventana
+                break;
+            }
+        }
     }
     
 }
