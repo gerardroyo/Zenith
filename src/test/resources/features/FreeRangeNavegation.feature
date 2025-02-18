@@ -1,10 +1,13 @@
-Feature: La barra de navegacion superior me permite navegar a todas las subsecciones
+@Navegacion
+Feature: Navegación
     Para ver las paginas dentro de FRT
     Sin haber logueado
     Puedo hacer click en los linkss
 
-    Scenario Outline: Puedo acceder a las subsecciones haciendo click en la navegacion superior
+    Background: Estoy en la web de Free Range Testers sin la sesión iniciada
         Given Navegar a www.freerangtesters.com
+
+    Scenario Outline: Puedo acceder a las subsecciones haciendo click en la navegacion superior
         When Voy a <secciones> usando la barra de navegacion
         Examples:
             | secciones |
@@ -15,13 +18,12 @@ Feature: La barra de navegacion superior me permite navegar a todas las subsecci
             | Udemy     |
             | Academia  |
 
+    @Cursos
     Scenario: Los cursos se muestran de la forma correcta a los potenciales clientes
-        Given Navegar a www.freerangtesters.com
         When Voy a Cursos usando la barra de navegacion
         And Seleccionar Introduccion al Testing y comprar
 
-    @Planes
+    @Planes @Cursos
     Scenario: Los susarios puedes seleccionar un plan cuando estan registrados
-        Given Navegar a www.freerangtesters.com
         When El usuario selecciona Recursos y navega a Automation Sandbox
-        Then Puedo validar las opciones del primer dropdown de la apgina Automation Sandbox
+        Then El sistema puede validar las opciones del primer dropdown de la apgina Automation Sandbox

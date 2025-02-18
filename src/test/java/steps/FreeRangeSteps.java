@@ -13,7 +13,6 @@ import pages.PaginaAutoSandbox;
 import pages.PaginaCursos;
 import pages.PaginaIntroAlTesting;
 
-
 public class FreeRangeSteps {
 
     SoftAssert soft = new SoftAssert();
@@ -53,13 +52,18 @@ public class FreeRangeSteps {
         paginaIntroAlTesting.clickComprarAhora();
     }
 
-    @Then("Puedo validar las opciones del primer dropdown de la apgina Automation Sandbox")
+    @Then("^(?:Puedo|El sistema puede) validar las opciones del primer dropdown de la apgina Automation Sandbox$")
     public void validarPrimerDropdownEnAutoSandbox() {
         List<String> lista = paginaAutoSandbox.valoresPrimerDropdown();
         List<String> listaEsperada = Arrays.asList("Seleccioná un deporte", "Fútbol", "Tennis", "Basketball");
 
         Assert.assertEquals(listaEsperada, lista);
     }
+
+    // Ejemplo de método con comentarios explicativos
+    /**
+     * Método de ejemplo para demostrar el uso de assertions.
+     */
 
     public void EjemploAssertions() {
         String palabraEsperada = "Pepe";

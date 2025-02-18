@@ -8,6 +8,8 @@
 plugins {
     // Apply the application plugin to add support for building a CLI application in Java.
     id 'application'
+    id 'java'
+    id 'io.qameta.allure' version '2.8.1'
 }
 
 repositories {
@@ -16,31 +18,48 @@ repositories {
 }
 
 dependencies {
-    // Use JUnit Jupiter for testing.
-    testImplementation libs.junit.jupiter
+    // JUnit Jupiter para pruebas
+    testImplementation 'org.junit.jupiter:junit-jupiter:5.7.0'
 
-    // https://mvnrepository.com/artifact/org.seleniumhq.selenium/selenium-java --- Libreria para hacer acertions/validaciones
-    
-    implementation group: 'org.seleniumhq.selenium', name: 'selenium-java', version: '4.28.1'
+    // Selenium para automatización de navegadores
+    implementation 'org.seleniumhq.selenium:selenium-java:4.28.1'
+    testImplementation 'org.seleniumhq.selenium:selenium-java:4.28.1'
 
-    // https://mvnrepository.com/artifact/io.github.bonigarcia/webdrivermanager
-    implementation group: 'io.github.bonigarcia', name: 'webdrivermanager', version: '5.9.2'
+    // WebDriverManager para gestionar drivers de navegadores
+    implementation 'io.github.bonigarcia:webdrivermanager:5.9.2'
 
-
-    // https://mvnrepository.com/artifact/org.testng/testng
+    // TestNG para pruebas
     testImplementation 'org.testng:testng:7.10.2'
 
-    // https://mvnrepository.com/artifact/io.cucumber/cucumber-java
-    implementation group: 'io.cucumber', name: 'cucumber-java', version: '7.21.1'
+    // Cucumber para pruebas BDD
+    implementation 'io.cucumber:cucumber-java:7.21.1'
+    testImplementation 'io.cucumber:cucumber-java:7.21.1'
+    testImplementation 'io.cucumber:cucumber-junit:7.21.1'
 
+    // ExtentReports para reportes
+    implementation 'com.aventstack:extentreports:5.1.2'
 
-    // https://mvnrepository.com/artifact/io.cucumber/cucumber-junit
-    testImplementation group: 'io.cucumber', name: 'cucumber-junit', version: '7.21.1'
+    // Allure para reportes
+    testImplementation 'io.qameta.allure:allure-cucumber6-jvm:2.13.8'
 
+    // AspectJ para Allure
+    //runtimeOnly 'org.aspectj:aspectjweaver:1.9.22.1'
+
+    // Log4j para logs
+    //implementation 'org.apache.logging.log4j:log4j-api:2.24.3'
+    //implementation 'org.apache.logging.log4j:log4j-core:2.24.3'
+
+    // AspectJ agent
+    //aspectjAgent 'org.aspectj:aspectjweaver:1.9.22.1'
 }
 
 tasks.named('test') {
+    useJUnitPlatform()
     systemProperty "cucumber.options", System.getProperty("cucumber.options")
     systemProperties System.getProperties();
-    //systemProperty "cucumber.filter.tags", System.getProperty("cucumber.filter.tags", "")
+    //jvmArgs += "-javaagent:${configurations.aspectjAgent.singleFile}"
+}
+
+allure {
+    version = '2.13.8'
 }
