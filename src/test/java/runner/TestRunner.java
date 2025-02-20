@@ -1,24 +1,20 @@
 package runner;
 
-import org.junit.AfterClass;
-import org.junit.runner.RunWith;
+import org.junit.platform.suite.api.ConfigurationParameter;
+import org.junit.platform.suite.api.IncludeEngines;
+import org.junit.platform.suite.api.SelectClasspathResource;
+import org.junit.platform.suite.api.Suite;
 
-import io.cucumber.junit.Cucumber;
-import io.cucumber.junit.CucumberOptions;
-import pages.BasePage;
+import static io.cucumber.junit.platform.engine.Constants.GLUE_PROPERTY_NAME;
 
-@RunWith(Cucumber.class)
-@CucumberOptions(features = "src\\test\\resources\\features", // Directorio de nuestros archivos .feature
-        glue = "steps", // Paquete donde tenemos nuestras clases definiendo los steps escritos en el feature file
-        plugin = {"pretty", "html:target/cucumber-reports"}) // Plugin para generar reportes
-        //tags = "@Navegacion")
-        // comando para ejecutar tags en concreto en la terminal:
-        // PowerShell: gradle test -D "cucumber.filter.tags=@Plans"
-        // Bash: ./gradlew test -Dcucumber.filter.tags="@Planss"
-
+@Suite
+@IncludeEngines("cucumber") // Habilita Cucumber como motor de pruebas
+@SelectClasspathResource("features") // Ruta de tus archivos .feature (relativa a src/test/resources)
+@ConfigurationParameter(
+    key = GLUE_PROPERTY_NAME,
+    value = "steps" // Paquete donde están tus step definitions
+)
 public class TestRunner { 
-    @AfterClass
-    public static void tearDown() {
-        BasePage.closeBrowser();
-    }
+    // No necesitas @AfterClass si usas JUnit 5
+    // El cierre del navegador debe manejarse en hooks de Cucumber
 }

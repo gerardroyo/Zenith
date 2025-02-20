@@ -21,7 +21,7 @@ El objetivo principal es ahorrar tiempo en la preparación y configuración del 
 - **Uso de Cucumber**: Permite escribir pruebas en lenguaje Gherkin, haciendo los tests más legibles y comprensibles para personas sin conocimientos de programación.
 - **Estructura simplificada**: Todo el código reside dentro de una sola carpeta `Test`, facilitando la comprensión de la infraestructura y evitando posibles conflictos con dependencias.
 - **Espera implícita en locators**: Implementación de esperas para manejar elementos dinámicos en la página, reduciendo fallos por tiempos de carga inesperados.
-- **Integración con TestNG**: Generación de scripts de código fáciles de leer y generación de informes de prueba personalizados.
+- **Integración con AssertJ**: Generación de scripts de código fáciles de leer y generación de informes de prueba personalizados.
 - **Actualización automática de WebDriver**: Uso de WebDriverManager para mantener el driver de Chrome actualizado automáticamente según la versión instalada en el sistema.
 - **Gestión de dependencias con Gradle**: Simplifica la construcción del proyecto y la gestión de dependencias, evitando el uso de Maven.
 
@@ -36,12 +36,13 @@ El objetivo principal es ahorrar tiempo en la preparación y configuración del 
 ## Dependencias incluidas
 (No es necesario instalarlas manualmente):
 
-- **Selenium**: `selenium-java:4.26.0`
+- **Selenium**: `selenium-java:4.28.1`
 - **WebDriverManager**: `webdrivermanager:5.9.2`
-- **TestNG**: `testng:7.10.2`
+- **AssertJ**: `assertj-core:3.25.3`
 - **Cucumber**:
-  - `cucumber-java:7.20.1`
-  - `cucumber-junit:7.20.1`
+  - `cucumber-java:7.21.1`
+  - `cucumber-junit-platform-engine:7.21.1`
+  - `cucumber-junit-platform-suite:1.11.4`
 
 ## Herramientas recomendadas
 

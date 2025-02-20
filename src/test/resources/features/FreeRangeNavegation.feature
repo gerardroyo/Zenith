@@ -17,12 +17,10 @@ Feature: Navegación
             | Udemy     |
             | Academia  |
 
-    
     Scenario: Los cursos se muestran de la forma correcta a los potenciales clientes
         When Voy a Cursos usando la barra de navegacion
         And Seleccionar Introduccion al Testing y comprar
 
-    
     Scenario: Los susarios puedes seleccionar un plan cuando estan registrados
         When El usuario selecciona Recursos y navega a Automation Sandbox
         Then El sistema puede validar las opciones del primer dropdown de la apgina Automation Sandbox

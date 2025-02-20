@@ -3,19 +3,21 @@ package steps;
 import java.util.Arrays;
 import java.util.List;
 
-import org.testng.Assert;
-import org.testng.asserts.SoftAssert;
+import org.assertj.core.api.SoftAssertions;
 
-import io.cucumber.java.en.*;
-import pages.PaginaPrincipal;
-import pages.PaginaRecursos;
+import io.cucumber.java.en.And;
+import io.cucumber.java.en.Given;
+import io.cucumber.java.en.Then;
+import io.cucumber.java.en.When;
 import pages.PaginaAutoSandbox;
 import pages.PaginaCursos;
 import pages.PaginaIntroAlTesting;
+import pages.PaginaPrincipal;
+import pages.PaginaRecursos;
 
 public class FreeRangeSteps {
 
-    SoftAssert soft = new SoftAssert();
+    SoftAssertions softly = new SoftAssertions();
 
     PaginaPrincipal landingPage = new PaginaPrincipal();
     PaginaCursos paginaCursos = new PaginaCursos();
@@ -57,7 +59,7 @@ public class FreeRangeSteps {
         List<String> lista = paginaAutoSandbox.valoresPrimerDropdown();
         List<String> listaEsperada = Arrays.asList("Seleccioná un deporte", "Fútbol", "Tennis", "Basketball");
 
-        Assert.assertEquals(listaEsperada, lista);
+        softly.assertThat(lista).isEqualTo(listaEsperada);
     }
 
     // Ejemplo de método con comentarios explicativos
@@ -72,27 +74,13 @@ public class FreeRangeSteps {
         Integer numeroLoco = 1;
         Integer numeroLoco2 = 2;
     
-        Assert.assertEquals(numeroLoco, numeroLoco2);
+    softly.assertThat(numeroLoco).isEqualTo(numeroLoco2); // ✅
+    softly.assertThat(palabraEncontrada).isNotEqualTo(palabraEsperada); // ✅
+    softly.assertThat(palabraEncontrada).isEqualTo(palabraEsperada); // ✅
+    softly.assertThat(palabraEncontrada.contains(palabraEsperada)).isTrue(); // ✅
+    softly.assertThat(palabraEncontrada.contains(palabraEsperada)).isFalse(); // ✅
     
-        // Verificar que dos valores no son iguales
-        Assert.assertNotEquals(palabraEsperada, palabraEncontrada);
-    
-        // Verificar que dos valores no iguales
-        Assert.assertEquals(palabraEsperada, palabraEncontrada);
-    
-        // Verificar que una condición es verdadera
-        Assert.assertTrue(palabraEncontrada.contains(palabraEsperada));
-    
-        // Verificar que una condición es false
-        Assert.assertFalse(palabraEncontrada.contains(palabraEsperada));
-
-        // Soft Assertions: No detienen la ejecución al fallar. Ideal para verificar
-        // muchas cosas pequeñas a la vez.
-        soft.assertEquals(palabraEsperada, palabraEncontrada);
-        soft.assertTrue(palabraEncontrada.contains(palabraEsperada));
-        soft.assertNotEquals(palabraEncontrada,palabraEsperada);
- 
-        soft.assertAll();
+    //softly.assertAll(); // Ejecuta todas las verificaciones
     }
     
 

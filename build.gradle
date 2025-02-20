@@ -1,36 +1,31 @@
 plugins {
-    // Apply the application plugin to add support for building a CLI application in Java.
-    id 'application'
     id 'java'
 }
 
 repositories {
-    // Use Maven Central for resolving dependencies.
     mavenCentral()
 }
 
 dependencies {
-    // JUnit Jupiter para pruebas
-    testImplementation 'org.junit.jupiter:junit-jupiter:5.7.0'
-
-    // Selenium para automatización de navegadores
-    implementation 'org.seleniumhq.selenium:selenium-java:4.28.1'
-    testImplementation 'org.seleniumhq.selenium:selenium-java:4.28.1'
-
-    // WebDriverManager para gestionar drivers de navegadores
-    implementation 'io.github.bonigarcia:webdrivermanager:5.9.2'
-
-    // TestNG para pruebas
-    testImplementation 'org.testng:testng:7.11.0'
-
-    // Cucumber para pruebas BDD
-    implementation 'io.cucumber:cucumber-java:7.21.1'
+    // Cucumber
     testImplementation 'io.cucumber:cucumber-java:7.21.1'
-    testImplementation 'io.cucumber:cucumber-junit:7.21.1'
+    testImplementation 'io.cucumber:cucumber-junit-platform-engine:7.21.1' // ✅ JUnit 5
+
+    // JUnit Platform (Suite y Engine)
+    testImplementation 'org.junit.platform:junit-platform-suite:1.11.4' // Permite usar @Suite
+    testImplementation 'org.junit.jupiter:junit-jupiter:5.11.4' // JUnit 5 Core
+
+    // Selenium
+    testImplementation 'org.seleniumhq.selenium:selenium-java:4.28.1'
+    testImplementation 'io.github.bonigarcia:webdrivermanager:5.9.2'
+
+    // AssertJ para aserciones fluidas
+    testImplementation 'org.assertj:assertj-core:3.25.3'
 }
 
-tasks.named('test') {
+test {
     useJUnitPlatform()
-    systemProperty "cucumber.options", System.getProperty("cucumber.options")
-    systemProperties System.getProperties();
+    systemProperty("cucumber.execution.args", 
+        "--glue steps src/test/resources/features"
+    )
 }

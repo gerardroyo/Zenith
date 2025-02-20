@@ -4,6 +4,7 @@ import org.openqa.selenium.OutputType;
 import org.openqa.selenium.TakesScreenshot;
 
 import io.cucumber.java.After;
+import io.cucumber.java.AfterAll;
 import io.cucumber.java.Scenario;
 import pages.BasePage;
 
@@ -20,6 +21,11 @@ public class Hooks extends BasePage {
             final byte[] screenshot =((TakesScreenshot) driver).getScreenshotAs(OutputType.BYTES);
             scenario.attach(screenshot, "image/png", "Screenshot del error");
         }
+    }
+
+    @AfterAll // Se ejecuta al finalizar todos los escenarios
+    public static void tearDown() {
+        BasePage.closeBrowser();
     }
 
 }

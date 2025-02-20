@@ -2,16 +2,16 @@ package pages;
 
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
-import org.testng.annotations.AfterMethod;
-import org.testng.annotations.BeforeMethod;
-import org.testng.annotations.Test;
+import org.junit.jupiter.api.AfterEach;
+import org.junit.jupiter.api.BeforeEach;
+import org.junit.jupiter.api.Test;
 import io.github.bonigarcia.wdm.WebDriverManager;
 
 public class FreeRangeTest {
 
     private WebDriver driver;
 
-    @BeforeMethod
+    @BeforeEach
     public void setUp() {
         // Inicializa el WebDriver para Chrome
         WebDriverManager.chromedriver().setup();
@@ -24,7 +24,7 @@ public class FreeRangeTest {
         driver.get("https://www.freerangetesters.com");
     }
 
-    @AfterMethod
+    @AfterEach
     public void tearDown() {
         // Cierra el navegador después de la prueba
         if (driver != null) {
