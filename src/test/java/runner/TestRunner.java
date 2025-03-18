@@ -5,16 +5,16 @@ import org.junit.platform.suite.api.IncludeEngines;
 import org.junit.platform.suite.api.SelectClasspathResource;
 import org.junit.platform.suite.api.Suite;
 
-import static io.cucumber.junit.platform.engine.Constants.GLUE_PROPERTY_NAME;
-
 @Suite
-@IncludeEngines("cucumber") // Habilita Cucumber como motor de pruebas
-@SelectClasspathResource("features") // Ruta de tus archivos .feature (relativa a src/test/resources)
+@IncludeEngines("cucumber")
+@SelectClasspathResource("features") // Ruta de tus archivos .feature (ej: src/test/resources/features)
 @ConfigurationParameter(
-    key = GLUE_PROPERTY_NAME,
-    value = "steps" // Paquete donde están tus step definitions
+    key = io.cucumber.junit.platform.engine.Constants.PLUGIN_PROPERTY_NAME,
+    value = "io.qameta.allure.cucumber7jvm.AllureCucumber7Jvm, pretty"
 )
-public class TestRunner { 
-    // No necesitas @AfterClass si usas JUnit 5
-    // El cierre del navegador debe manejarse en hooks de Cucumber
+@ConfigurationParameter(
+    key = io.cucumber.junit.platform.engine.Constants.GLUE_PROPERTY_NAME,
+    value = "steps" // Reemplaza con tu paquete de Step Definitions
+)
+public class TestRunner {
 }

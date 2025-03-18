@@ -2,9 +2,9 @@ package pages;
 
 public class PaginaPrincipal extends BasePage {
 
-    private String linkSeccion = "//a[normalize-space()='%s' and @href]";
-    private String botonElegirPlanIntroQA = "//a[@href='https://www.freerangetesters.com/nivel-inicial-fundamentos-del-testing' and normalize-space()='Ver plan de carrera']";
-    private String botonMenuRecursos = "//a[normalize-space()='Recursos' and @href]";
+    String linkSeccion = "//a[normalize-space()='%s' and @href]";
+    String botonElegirPlanIntroQA = "//a[@href='https://www.freerangetesters.com/nivel-inicial-fundamentos-del-testing' and normalize-space()='Ver plan de carrera']";
+    String botonMenuRecursos = "//a[normalize-space()='Recursos' and @href]";
 
     public PaginaPrincipal(){
         super(driver);

@@ -25,7 +25,7 @@ public class FreeRangeSteps {
     PaginaRecursos paginaRecursos = new PaginaRecursos();
     PaginaAutoSandbox paginaAutoSandbox = new PaginaAutoSandbox();
 
-    @Given("Navegar a www.freerangtesters.com")
+    @Given("Navegar a www.freerangetesters.com")
     public void navegarAFRT(){
         landingPage.navegarAFreeRangeTesters();
     }
@@ -57,7 +57,7 @@ public class FreeRangeSteps {
     @Then("^(?:Puedo|El sistema puede) validar las opciones del primer dropdown de la apgina Automation Sandbox$")
     public void validarPrimerDropdownEnAutoSandbox() {
         List<String> lista = paginaAutoSandbox.valoresPrimerDropdown();
-        List<String> listaEsperada = Arrays.asList("Seleccioná un deporte", "Fútbol", "Tennis", "Basketball");
+        List<String> listaEsperada = Arrays.asList("Seleccionáaaaaaaaaaaa un deporte", "Fútbol", "Tennis", "Basketball");
 
         softly.assertThat(lista).isEqualTo(listaEsperada);
     }

@@ -1,11 +1,12 @@
 package steps;
 
+import io.cucumber.java.After;
+import io.cucumber.java.Scenario;
+import io.qameta.allure.Allure;
 import org.openqa.selenium.OutputType;
 import org.openqa.selenium.TakesScreenshot;
+import java.io.ByteArrayInputStream;
 
-import io.cucumber.java.After;
-import io.cucumber.java.AfterAll;
-import io.cucumber.java.Scenario;
 import pages.BasePage;
 
 public class Hooks extends BasePage {
@@ -15,17 +16,18 @@ public class Hooks extends BasePage {
     }
 
     @After
-    public void tareaDeMantenimiento (Scenario scenario) {
-        if(scenario.isFailed()) {
-            scenario.log("Falló el scenario, porfavor hechale un vistazo a la imagen adjuntada a este reporte");
-            final byte[] screenshot =((TakesScreenshot) driver).getScreenshotAs(OutputType.BYTES);
-            scenario.attach(screenshot, "image/png", "Screenshot del error");
+    public void afterScenario(Scenario scenario) {
+        if (scenario.isFailed()) {
+            takeScreenshot(scenario.getName());
         }
     }
 
-    @AfterAll // Se ejecuta al finalizar todos los escenarios
-    public static void tearDown() {
-        BasePage.closeBrowser();
+    private void takeScreenshot(String scenarioName) {
+        if (driver instanceof TakesScreenshot takesScreenshot) {
+            byte[] screenshot = takesScreenshot.getScreenshotAs(OutputType.BYTES);
+            Allure.addAttachment("Screenshot on failure: " + scenarioName,
+                new ByteArrayInputStream(screenshot));
+        }
     }
 
 }

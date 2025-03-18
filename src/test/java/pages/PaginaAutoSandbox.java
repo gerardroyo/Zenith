@@ -4,7 +4,7 @@ import java.util.List;
 
 public class PaginaAutoSandbox extends BasePage {
 
-    private String primerDropdown = "//select[@id='formBasicSelect']";
+    String primerDropdown = "//select[@id='formBasicSelect']";
 
     public PaginaAutoSandbox() {
         super(driver);

@@ -1,5 +1,6 @@
 plugins {
     id 'java'
+    id("io.qameta.allure") version "2.12.0" // ✅ Usa paréntesis y comillas
 }
 
 repositories {
@@ -17,10 +18,33 @@ dependencies {
 
     // Selenium
     testImplementation 'org.seleniumhq.selenium:selenium-java:4.28.1'
-    testImplementation 'io.github.bonigarcia:webdrivermanager:5.9.2'
+    testImplementation 'io.github.bonigarcia:webdrivermanager:5.9.3'
+
 
     // AssertJ para aserciones fluidas
     testImplementation 'org.assertj:assertj-core:3.25.3'
+
+    // Allure
+    testImplementation 'io.qameta.allure:allure-cucumber7-jvm:2.29.1' // ✅ Para Cucumber 7
+    testImplementation 'io.qameta.allure:allure-junit5:2.29.1'        // ✅ Para JUnit 5
+    testImplementation 'io.qameta.allure:allure-attachments:2.29.1'
+
+
+
+}
+
+allure {
+    version = '2.12.0'
+    adapter {
+        frameworks {
+            cucumberJvm {
+                adapterVersion = '2.12.0' // Versión compatible con Cucumber
+            }
+            junit5 {
+                adapterVersion = '2.12.0' // Versión compatible con JUnit 5
+            }
+        }
+    }
 }
 
 test {
