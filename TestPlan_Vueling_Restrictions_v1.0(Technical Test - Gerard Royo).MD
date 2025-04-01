@@ -6,8 +6,8 @@
 
 ## INDEX
 
-1. [Project Data for Vueling’s Ticket Selling Web](#project-data-for-vuelings-ticket-selling-web)
-2. [Introduction and Objectives](#introduction-and-objectives)
+1. [Project data for Vueling’s Ticket Selling Web](#project-data-for-vuelings-ticket-selling-web)
+2. [Introduction and objectives](#introduction-and-objectives)
 3. [Scope of Testing](#scope-of-testing)
 4. [Testing Strategy and Approach](#testing-strategy-and-approach)
 5. [Planning](#planning)
@@ -20,110 +20,110 @@
 
 > **Note:** In developing this Test Plan, I followed the best practices and guidelines defined by the ISTQB, along with a few personal touches.
 
-## 1. Project Data for Vueling’s Ticket Selling Web
+## 1. Project data for Vueling’s Ticket Selling Web
 
 | Version               | Date       | Author      | Canges                 | Stakeholders |
 |-----------------------|------------|-------------|------------------------|--------------|
 | 1.0                   | 01/04/2025 | Gerard Royo | Document creation      | Vueling      |
 
 
-**Project Description:**  
-A web system for selling airline tickets, with specific rules regarding the travel of minors and the validation of insurance rate tariffs in the technical section.
+**Project description:**  
+A web system for selling airline tickets, with specific rules regarding the travel of minors and validation of insurance rate tariffs in the technical section.
 
-**Executive Summary:**  
-This document describes the manual test plan designed to validate the business rules implemented in the Vueling’s Ticket Selling Web system. The primary focus is to ensure that the restrictions related to booking tickets for minors are correctly enforced according to established policies. Additionally, acceptance criteria, scope, testing strategy, and the necessary planning for the successful execution of tests in the established environment are defined.
+**Executive summary:**  
+This document describes the manual test plan designed to validate the business rules implemented in the Vueling’s Ticket Selling Web system. The primary focus is to ensure that the restrictions related to booking tickets for minors are correctly enforced in accordance with established policies. In addition, acceptance criteria, scope, testing strategy, and the necessary planning for the successful execution of tests in the established environment are defined.
 
 ---
 
-## 2. Introduction and Objectives
+## 2. Introduction and objectives
 
-**Project Context:**  
-The project consists of implementing and validating a reservation system for Vueling. Specifically, the system must enforce accompaniment rules for children and adolescents based on their age and nationality. This initiative aims to optimize safety and customer satisfaction, ensuring that bookings comply with current regulations and Vueling’s internal policies.
+**Project context:**  
+The project consists of implementing and validating a reservation system for Vueling. Specifically, the system must enforce accompaniment rules for children and adolescents based on their age and nationality. This initiative aims to optimize safety and customer satisfaction, ensuring that bookings are made in compliance with current regulations and Vueling’s internal policies.
 
-**Test Objectives:**
+**Test objectives:**
 
-1. **Verify the Implementation of Business Rules:**  
+1. **Verify the implementation of business rules:**  
    Ensure that the system prevents reservations that do not meet the accompaniment conditions established for each age group and nationality.
 
-2. **Identify Input Validation Defects:**  
+2. **Identify input validation defects:**  
    Detect any inconsistencies in the system’s validation logic, both on the user interface and within the booking flow.
 
-3. **Guarantee User Experience:**  
+3. **Guarantee user experience:**  
    Confirm that the application’s messages and behavior are clear and correctly guide the user when a reservation is not allowed due to the established restrictions.
 
 ---
 
-## 3. Scope of Testing
+## 3. Scope of testing
 
-### What is Tested
+### What is tested:
 
-**Business Rules for Minors:**
+**Business rules for minors:**
 
 - Verify that children under 12 can only book if they travel accompanied by an adult.
 - Check that Italian children under 14, when traveling to or from Italy, always travel accompanied by an adult.
 - Validate that Romanian passengers under 18, when traveling to or from Romania, have an adult present.
 - Ensure that unaccompanied minors under 16 cannot book connecting flights.
 
-**Booking Flow:**
+**Booking flow:**
 
 - Validate that when data is entered that meets (or does not meet) the conditions, the system responds with clear informational messages and either allows or prevents the reservation accordingly.
 - Confirm that the pages involved in the flow (data entry, booking confirmation, error messages) behave as expected.
 
-**Messages and Notifications:**
+**Messages and notifications:**
 
 - Verify that appropriate alert or error messages are displayed when a reservation does not comply with the established rules.
 
-### What is Not Tested
+### What is not tested:
 
-**Performance Aspects:**
+**Performance aspects:**
 
 - Response time and server load will not be evaluated. The focus is on validating business rules and the correct functionality of the booking flow.
 
-**Security Tests:**
+**Security tests:**
 
 - Vulnerability, authentication, or authorization tests will not be included unless specified in another phase of the project.
 
-**Detailed Visual Design and Usability:**
+**Detailed visual design and usability:**
 
 - The aesthetics or in-depth user experience (e.g., graphic design or responsiveness on different devices) will not be evaluated unless they directly affect the validation of the rules.
 
-**Integration with Other Systems:**
+**Integration with other systems:**
 
 - Testing integrations with external systems (e.g., payment gateways or third-party systems) that are not directly related to the validation of the booking flow will not be covered.
 
-**Other Booking Flows:**
+**Other booking flows:**
 
 - Tests related to booking flows not linked to the validation of the accompaniment rules for minors will be excluded.
 
 ---
 
-## 4. Testing Strategy and Approach
+## 4. Testing strategy and approach
 
-### Manual Tests
+### Manual tests:
 
-**Functional Tests:**  
+**Functional tests:**  
 - *Description:* These tests focus on validating that the application meets the defined functional requirements.
 
-**Boundary Value Tests:**  
+**Boundary value tests:**  
 - *Description:* This technique helps define test cases that cover different input groups (ages) and critical boundary values.
 
-**Exploratory Tests:**  
+**Exploratory tests:**  
 - *Description:* These tests allow testers to interact freely with the application to discover unexpected behaviors or defects not covered by predefined cases.
 
-### Future Automated Tests
+### Future automated tests:
 
 Although this plan focuses on manual testing, it is recommended to evaluate the automation of regression tests in future iterations to improve efficiency and test coverage.
 
-### Regression Tests
+### Regression tests:
 
 - *Description:* Each time changes are made to the validation logic, the selected CI/CD tool will re-execute the test cases to ensure no new errors are introduced.
 
-### Methodology
+### Methodology:
 
-**Black Box Techniques:**  
+**Black box techniques:**  
 - *Description:* Techniques such as boundary value analysis are applied to define representative data sets without knowledge of the system’s internal code.
 
-**Structuring and Documentation of Test Cases:**
+**Structuring and documentation of test cases:**
 
 - **Format:**  
   Each test case must include:
@@ -134,55 +134,57 @@ Although this plan focuses on manual testing, it is recommended to evaluate the 
   - **Expected Results:** The behavior expected from the system based on the defined requirements.
   - **Status and Observations:** A record of the actual result and comments on any deviations or issues encountered.
 
-**Continuous Review and Validation:**  
+**Continuous review and validation:**  
 - *Description:* Periodic sessions are recommended to review test cases and results with the team.
 
 ---
 
 ## 5. Planning
 
-### Key Dates and Milestones
+### Key dates and milestones:
 
-1. **Planning and Preparation**  
-   - **Start of Testing Project:**  
+1. **Planning and preparation**  
+   - **Start of testing project:**  
      - **Date:** 01/04/2025  
      - **Activity:** Review documentation and initially define the test scope and objectives.
-   - **Internal Approval of the Test Plan:**  
+   - **Internal approval of the test plan:**  
      - **Date:** 02/04/2025  
      - **Activity:** Internal review and validation of the document by the QA team.
 
-2. **Development of Regression Tests and Execution of Manual Tests**  
-   - **Start of Test Case Execution:**  
+2. **Development of regression tests and execution of manual tests**  
+   - **Start of test case execution:**  
      - **Date:** 09/04/2025  
      - **Activity:** Begin executing all defined test cases.
-   - **Completion of Test Execution:**  
+   - **Completion of test execution:**  
      - **Date:** 11/04/2025  
      - **Activity:** Conclude execution of all cases and record the results.
 
-3. **Results Logging and Analysis**  
-   - **Review and Logging of Incidents:**  
+3. **Results logging and analysis**  
+   - **Review and logging of incidents:**  
      - **Date:** 12/04/2025  
      - **Activity:** Consolidate defects and perform an initial analysis to identify patterns or critical areas.
-   - **Feedback Meeting:**  
+   - **Feedback meeting:**  
      - **Date:** 13/04/2025  
      - **Activity:** Session with the team and/or stakeholders to discuss findings, validate results, and define improvement or re-test actions.
 
-4. **Final Report and Closure**  
-   - **Final Report Delivery and Test Cycle Closure:**  
+4. **Final report and closure**  
+   - **Final report delivery and test cycle closure:**  
      - **Date:** 14/04/2025  
      - **Activity:** Draft and distribute the final report with conclusions, metrics, and recommendations for the next phase or system adjustments.
    - **Note:** In case of critical incidents, the schedule may be adjusted.
 
+> **Note:** In case of critical incidents, the schedule may be adjusted.
+
 ---
 
-## 6. Risk Forecasting and Management
+## 6. Risk forecasting and management
 
-**Last-Minute Changes in Requirements/Business Rules:**  
-- **Policy Updates:**  
+**Last-Minute changes in requirements/business rules:**  
+- **Policy updates:**  
   If any business rule is modified during testing, the affected test cases must be updated and revalidated. These changes must be documented in the test plan and, if necessary, the tests rescheduled to ensure full coverage of the new rules.
 
-**Environment Availability:**  
-- **Testing Environment Issues:**  
+**Environment availability:**  
+- **Testing environment issues:**  
   If the testing environment ([http://tickets.vueling.com](http://tickets.vueling.com) – PRE/DEV version) experiences unexpected downtime, connectivity issues, or slowness that prevent proper test execution, it is recommended to:
   - Establish direct communication with the infrastructure team to report and resolve the issue urgently.
   - Consider rescheduling test execution once normal operation is restored.
@@ -190,56 +192,62 @@ Although this plan focuses on manual testing, it is recommended to evaluate the 
 
 ---
 
-## 7. Definition of Manual Test Cases
+## 7. 7. Definition of manual test cases
 
-**Naming Legend:**  
-`TC_Rx_yyy.y` → **TC** = Test Case, **x** = Business Rule, **yyy** = Test Case Number.
+> **Naming Legend:** `TC_Rx_yyy.y` → **TC** = Test Case, **x** = Business Rule, **yyy** = Test Case Number.
+
 
 **Note:**  
 Normally, detailed test case definitions are documented in a separate file or through a test case management tool such as Jira or TestRail, which allows for a modular and scalable structure. In this Test Plan, the manual test cases are included directly to facilitate review and understanding of the testing scope and strategy in the context of this technical test. It is recommended that in larger projects, these cases be maintained in a separate document or system and linked within the Test Plan for easier maintenance and traceability.
 
+> **Note:** Normally, detailed test case definitions are documented in a separate file or through a test case management tool such as Jira or TestRail, which allows for a modular and scalable structure. In this Test Plan, the manual test cases are included directly to facilitate review and understanding of the testing scope and strategy in the context of this technical test. It is recommended that in larger projects, these cases be maintained in a separate document or system and linked within the Test Plan for easier maintenance and traceability.
+
 ---
 
-### Business Rule 1: Children Under 12 Must Travel Accompanied by an Adult
+### Business Rule 1: Children under 12 years old at time of the flight must always travel accompanied by an adult.
 
-| ID         | Título                                             | Precondiciones                                                                         | Pasos                                                                                                                                                                                                                                                                      | Resultado Esperado                                            | Estado  | Observaciones                                                                                         |
-|------------|----------------------------------------------------|----------------------------------------------------------------------------------------|-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|---------------------------------------------------------------|---------|-------------------------------------------------------------------------------------------------------|
-| TC_R1_001  | Reserva exitosa para niño de 11 años acompañado     | El formulario de reserva está completamente cargado en [http://tickets.vueling.com](http://tickets.vueling.com). | 1. Completar el campo "Origen" y "Destino".<br>2. Seleccionar la fecha de vuelo.<br>3. Ingresar datos del pasajero: Nombre, Edad = 11, Nacionalidad (cualquiera).<br>4. Ingresar los datos del adulto acompañante (Nombre, Edad, relación).<br>5. Hacer clic en "Buscar vuelos". | La reserva procede sin errores.                              | ✅/❌   | Caso positivo: el sistema valida que el menor va acompañado. “En caso de defecto, indicar lo sucedido.” |
-| TC_R1_002  | Bloqueo de reserva para niño de 11 años sin acompañante | El formulario de reserva está completamente cargado en [http://tickets.vueling.com](http://tickets.vueling.com). | 1. Completar "Origen" y "Destino" y seleccionar la fecha.<br>2. Ingresar datos del pasajero: Nombre, Edad = 11, Nacionalidad (cualquiera).<br>3. Omitir la sección de adulto acompañante.<br>4. Pulsar "Buscar vuelos".                        | Se muestra el mensaje "El pasajero debe viajar acompañado de un adulto" y la reserva se interrumpe. | ✅/❌   | Caso negativo: ausencia de acompañante provoca bloqueo.                                            |
-| TC_R1_003  | Reserva límite: pasajero de 12 años sin acompañante   | El formulario de reserva está completamente cargado en [http://tickets.vueling.com](http://tickets.vueling.com). | 1. Completar "Origen" y "Destino" y seleccionar la fecha.<br>2. Ingresar datos del pasajero: Nombre, Edad = 12, Nacionalidad (cualquiera).<br>3. No ingresar información de adulto acompañante.<br>4. Pulsar "Buscar vuelos".                | La reserva continúa, asumiendo que la regla aplica para menores estrictamente menores de 12. | ✅/❌   | Caso de límite: se verifica el comportamiento en el límite de edad.                                  |
+| ID         | Title                                                     | Preconditions                                                                                  | Steps                                                                                                                                                                                                                                                                      | Expected Result                                               | Status  | Observations                                                                                                             |
+|------------|-----------------------------------------------------------|------------------------------------------------------------------------------------------------|-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|---------------------------------------------------------------|---------|-------------------------------------------------------------------------------------------------------------------------|
+| TC_R1_001  | Successful Reservation for an 11-Year-Old Child Accompanied | The booking form is fully loaded on [http://tickets.vueling.com](http://tickets.vueling.com).      | 1. Fill in the "Origin" and "Destination" fields.<br>2. Select the flight date.<br>3. Enter passenger details: Name, Age = 11, Nationality (any).<br>4. Enter accompanying adult details (Name, Age, Relationship).<br>5. Click the "Search Flights" button.               | The reservation proceeds without errors.                      | ✅/❌   | Positive case: The system validates that the minor is accompanied. "In case of defect, record what occurred."             |
+| TC_R1_002  | Blocked Reservation for an 11-Year-Old Child Without Accompaniment | The booking form is fully loaded on [http://tickets.vueling.com](http://tickets.vueling.com).      | 1. Fill in the "Origin" and "Destination" fields and select the flight date.<br>2. Enter passenger details: Name, Age = 11, Nationality (any).<br>3. Omit the accompanying adult section.<br>4. Click "Search Flights".                                   | The system displays "The passenger must travel accompanied by an adult" and blocks the reservation.                        | ✅/❌   | Negative case: Absence of an accompanying adult causes blockage.                                                       |
+| TC_R1_003  | Boundary Case: 12-Year-Old Child Without Accompaniment      | The booking form is fully loaded on [http://tickets.vueling.com](http://tickets.vueling.com).      | 1. Fill in the "Origin" and "Destination" fields and select the flight date.<br>2. Enter passenger details: Name, Age = 12, Nationality (any).<br>3. Do not enter accompanying adult information.<br>4. Click "Search Flights".                         | The reservation proceeds, assuming the rule applies strictly to children under 12.                                     | ✅/❌   | Boundary case: Evaluates system behavior at the age limit.                                                             |
+
 
 ---
 
 ### Business Rule 2: Italian Children Under 14 Traveling To/From Italy Must Be Accompanied by an Adult
 
-| ID           | Título                                                                    | Precondiciones                                                                         | Pasos                                                                                                                                                                                                                                                                                 | Resultado Esperado                                                     | Estado  | Observaciones                                                                     |
-|--------------|---------------------------------------------------------------------------|----------------------------------------------------------------------------------------|-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|----------------------------------------------------------------------|---------|-----------------------------------------------------------------------------------|
-| TC_R2_004    | Reserva exitosa para italiano de 13 años acompañado (ida a Italia)          | El formulario de reserva está completamente cargado en [http://tickets.vueling.com](http://tickets.vueling.com). | 1. Completar "Origen" (ej. Roma) y "Destino" (ej. Madrid) y seleccionar la fecha.<br>2. Ingresar datos del pasajero: Nombre, Edad = 13, Nacionalidad = Italiana.<br>3. Ingresar datos de un adulto acompañante.<br>4. Pulsar "Buscar vuelos".                                     | La reserva continúa correctamente, mostrando opciones de vuelo.      | ✅/❌   | Caso positivo: se cumple la regla con acompañante (ida a Italia).                |
-| TC_R2_004.1  | Reserva exitosa para italiano de 13 años acompañado (vuelta a Italia)       | El formulario de reserva está completamente cargado en [http://tickets.vueling.com](http://tickets.vueling.com). | 1. Completar "Origen" (ej. Madrid) y "Destino" (ej. Roma) y seleccionar la fecha.<br>2. Ingresar datos del pasajero: Nombre, Edad = 13, Nacionalidad = Italiana.<br>3. Ingresar datos de un adulto acompañante.<br>4. Pulsar "Buscar vuelos".                                  | La reserva continúa correctamente, mostrando opciones de vuelo.      | ✅/❌   | Caso positivo: se cumple la regla con acompañante (vuelta a Italia).             |
-| TC_R2_005    | Bloqueo de reserva para italiano de 13 años sin acompañante                | El formulario de reserva está completamente cargado en [http://tickets.vueling.com](http://tickets.vueling.com). | 1. Completar "Origen" y "Destino" con ciudades italianas (ej. Roma a Milán) y seleccionar la fecha.<br>2. Ingresar datos del pasajero: Nombre, Edad = 13, Nacionalidad = Italiana.<br>3. Omitir la información del adulto.<br>4. Pulsar "Buscar vuelos".               | El sistema muestra "El pasajero debe viajar acompañado de un adulto" y bloquea la reserva. | ✅/❌   | Caso negativo: la ausencia de acompañante genera el error.                     |
-| TC_R2_006    | Reserva límite: italiano de 14 años sin acompañante                        | El formulario de reserva está completamente cargado en [http://tickets.vueling.com](http://tickets.vueling.com). | 1. Completar "Origen" y "Destino" (ej. Roma a Florencia) y seleccionar la fecha.<br>2. Ingresar datos del pasajero: Nombre, Edad = 14, Nacionalidad = Italiana.<br>3. No ingresar datos de adulto.<br>4. Pulsar "Buscar vuelos".                                     | La reserva continúa, asumiendo que la regla aplica para menores estrictamente menores de 14. | ✅/❌   | Caso de límite: se evalúa el comportamiento en el límite de edad.               |
+| ID           | Title                                                                       | Preconditions                                                                                  | Steps                                                                                                                                                                                                                                                                                   | Expected Result                                                      | Status  | Observations                                                                               |
+|--------------|-----------------------------------------------------------------------------|------------------------------------------------------------------------------------------------|-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|----------------------------------------------------------------------|---------|-------------------------------------------------------------------------------------------|
+| TC_R2_004    | Successful Reservation for a 13-Year-Old Italian Child Accompanied (Outbound to Italy) | The booking form is fully loaded on [http://tickets.vueling.com](http://tickets.vueling.com).      | 1. Fill in "Origin" (e.g., Rome) and "Destination" (e.g., Madrid) and select the flight date.<br>2. Enter passenger details: Name, Age = 13, Nationality = Italian.<br>3. Enter accompanying adult details.<br>4. Click "Search Flights".                                 | The reservation proceeds correctly, showing flight options.          | ✅/❌   | Positive case: Rule is met by providing an accompanying adult (Outbound to Italy).           |
+| TC_R2_004.1  | Successful Reservation for a 13-Year-Old Italian Child Accompanied (Return to Italy)      | The booking form is fully loaded on [http://tickets.vueling.com](http://tickets.vueling.com).      | 1. Fill in "Origin" (e.g., Madrid) and "Destination" (e.g., Rome) and select the flight date.<br>2. Enter passenger details: Name, Age = 13, Nationality = Italian.<br>3. Enter accompanying adult details.<br>4. Click "Search Flights".                                  | The reservation proceeds correctly, showing flight options.          | ✅/❌   | Positive case: Rule is met by providing an accompanying adult (Return to Italy).            |
+| TC_R2_005    | Blocked Reservation for a 13-Year-Old Italian Child Without an Accompanying Adult            | The booking form is fully loaded on [http://tickets.vueling.com](http://tickets.vueling.com).      | 1. Fill in "Origin" and "Destination" with Italian cities (e.g., Rome to Milan) and select the flight date.<br>2. Enter passenger details: Name, Age = 13, Nationality = Italian.<br>3. Omit accompanying adult information.<br>4. Click "Search Flights".             | The system displays "The passenger must travel accompanied by an adult" and blocks the reservation. | ✅/❌   | Negative case: Absence of an accompanying adult triggers the error.                       |
+| TC_R2_006    | Boundary Case: Italian Child of 14 Years Without an Accompanying Adult                         | The booking form is fully loaded on [http://tickets.vueling.com](http://tickets.vueling.com).      | 1. Fill in "Origin" and "Destination" (e.g., Rome to Florence) and select the flight date.<br>2. Enter passenger details: Name, Age = 14, Nationality = Italian.<br>3. Do not enter accompanying adult information.<br>4. Click "Search Flights".                        | The reservation proceeds, assuming the rule applies strictly to children under 14.             | ✅/❌   | Boundary case: Evaluates system behavior at the age limit.                                  |
+
 
 ---
 
 ### Business Rule 3: Romanian Children Under 18 Traveling To/From Romania Must Be Accompanied by an Adult
 
-| ID           | Título                                                                    | Precondiciones                                                                         | Pasos                                                                                                                                                                                                                                                                    | Resultado Esperado                                                     | Estado  | Observaciones                                                       |
-|--------------|---------------------------------------------------------------------------|----------------------------------------------------------------------------------------|--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|----------------------------------------------------------------------|---------|---------------------------------------------------------------------|
-| TC_R3_007    | Reserva exitosa para rumano de 17 años acompañado (ida a Rumania)           | El formulario de reserva está completamente cargado en [http://tickets.vueling.com](http://tickets.vueling.com). | 1. Completar "Origen" (ej. Bucarest) y "Destino" (ej. Madrid) y seleccionar la fecha.<br>2. Ingresar datos del pasajero: Nombre, Edad = 17, Nacionalidad = Rumana.<br>3. Ingresar datos de un adulto acompañante.<br>4. Pulsar "Buscar vuelos".              | La reserva continúa correctamente, mostrando opciones de vuelo.      | ✅/❌   | Caso positivo: validación correcta con acompañante.                  |
-| TC_R3_007.1  | Reserva exitosa para rumano de 17 años acompañado (vuelta a Rumania)        | El formulario de reserva está completamente cargado en [http://tickets.vueling.com](http://tickets.vueling.com). | 1. Completar "Origen" (ej. Madrid) y "Destino" (ej. Bucarest) y seleccionar la fecha.<br>2. Ingresar datos del pasajero: Nombre, Edad = 17, Nacionalidad = Rumana.<br>3. Ingresar datos de un adulto acompañante.<br>4. Pulsar "Buscar vuelos".              | La reserva continúa correctamente, mostrando opciones de vuelo.      | ✅/❌   | Caso positivo: valida la regla con acompañante en vuelo de retorno.     |
-| TC_R3_008    | Bloqueo de reserva para rumano de 17 años sin acompañante                  | El formulario de reserva está completamente cargado en [http://tickets.vueling.com](http://tickets.vueling.com). | 1. Completar "Origen" y "Destino" (ej. Bucarest a Barcelona) y seleccionar la fecha.<br>2. Ingresar datos del pasajero: Nombre, Edad = 17, Nacionalidad = Rumana.<br>3. Omitir datos de adulto acompañante.<br>4. Pulsar "Buscar vuelos".               | El sistema muestra "El pasajero debe viajar acompañado de un adulto" y bloquea la reserva. | ✅/❌   | Caso negativo: ausencia de acompañante provoca bloqueo.             |
-| TC_R3_009    | Reserva límite: rumano de 18 años sin acompañante                          | El formulario de reserva está completamente cargado en [http://tickets.vueling.com](http://tickets.vueling.com). | 1. Completar "Origen" y "Destino" (ej. Bucarest a París) y seleccionar la fecha.<br>2. Ingresar datos del pasajero: Nombre, Edad = 18, Nacionalidad = Rumana.<br>3. No ingresar datos de adulto.<br>4. Pulsar "Buscar vuelos".                   | La reserva continúa, asumiendo que la regla aplica para menores estrictamente menores de 18. | ✅/❌   | Caso de límite: se evalúa el comportamiento en el límite de edad.      |
+| ID           | Title                                                                       | Preconditions                                                                                  | Steps                                                                                                                                                                                                                                                                                   | Expected Result                                                      | Status  | Observations                                                           |
+|--------------|-----------------------------------------------------------------------------|------------------------------------------------------------------------------------------------|-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|----------------------------------------------------------------------|---------|-----------------------------------------------------------------------|
+| TC_R3_007    | Successful Reservation for a 17-Year-Old Romanian Child Accompanied (Outbound to Romania) | The booking form is fully loaded on [http://tickets.vueling.com](http://tickets.vueling.com).      | 1. Fill in "Origin" (e.g., Bucharest) and "Destination" (e.g., Madrid) and select the flight date.<br>2. Enter passenger details: Name, Age = 17, Nationality = Romanian.<br>3. Enter accompanying adult details.<br>4. Click "Search Flights".                          | The reservation proceeds correctly, displaying flight options.        | ✅/❌   | Positive case: Correct validation with accompaniment.                |
+| TC_R3_007.1  | Successful Reservation for a 17-Year-Old Romanian Child Accompanied (Return to Romania)      | The booking form is fully loaded on [http://tickets.vueling.com](http://tickets.vueling.com).      | 1. Fill in "Origin" (e.g., Madrid) and "Destination" (e.g., Bucharest) and select the flight date.<br>2. Enter passenger details: Name, Age = 17, Nationality = Romanian.<br>3. Enter accompanying adult details.<br>4. Click "Search Flights".                          | The reservation proceeds correctly, displaying flight options.        | ✅/❌   | Positive case: Validates the rule with accompaniment on a return flight. |
+| TC_R3_008    | Blocked Reservation for a 17-Year-Old Romanian Child Without an Accompanying Adult             | The booking form is fully loaded on [http://tickets.vueling.com](http://tickets.vueling.com).      | 1. Fill in "Origin" and "Destination" (e.g., Bucharest to Barcelona) and select the flight date.<br>2. Enter passenger details: Name, Age = 17, Nationality = Romanian.<br>3. Omit accompanying adult information.<br>4. Click "Search Flights".                       | The system displays "The passenger must travel accompanied by an adult" and blocks the reservation. | ✅/❌   | Negative case: Absence of an accompanying adult causes blockage.       |
+| TC_R3_009    | Boundary Case: Romanian Child of 18 Years Without an Accompanying Adult                        | The booking form is fully loaded on [http://tickets.vueling.com](http://tickets.vueling.com).      | 1. Fill in "Origin" and "Destination" (e.g., Bucharest to Paris) and select the flight date.<br>2. Enter passenger details: Name, Age = 18, Nationality = Romanian.<br>3. Do not enter accompanying adult information.<br>4. Click "Search Flights".                   | The reservation proceeds, assuming the rule applies strictly to children under 18.              | ✅/❌   | Boundary case: Evaluates behavior at the age limit.                    |
+
 
 ---
 
 ### Business Rule 4: Unaccompanied Minors Under 16 Cannot Book Connecting Flights
 
-| ID           | Título                                                                      | Precondiciones                                                                         | Pasos                                                                                                                                                                                                                                                                | Resultado Esperado                                                         | Estado  | Observaciones                                                               |
-|--------------|-----------------------------------------------------------------------------|----------------------------------------------------------------------------------------|----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|----------------------------------------------------------------------------|---------|-----------------------------------------------------------------------------|
-| TC_R4_010    | Reserva exitosa para pasajero de 15 años sin acompañante en vuelo directo      | El formulario de reserva está completamente cargado en [http://tickets.vueling.com](http://tickets.vueling.com). | 1. Completar "Origen" (ej. Valencia) y "Destino" (ej. Sevilla) y seleccionar la fecha.<br>2. Ingresar datos del pasajero: Nombre, Edad = 15.<br>3. No ingresar datos de adulto.<br>4. Seleccionar un vuelo directo (sin conexión).<br>5. Pulsar "Buscar vuelos". | La reserva procede sin errores, ya que la restricción de vuelos con conexión no aplica. | ✅/❌   | Caso positivo: regla de vuelos con conexión no aplica para vuelos directos.  |
-| TC_R4_011    | Bloqueo de reserva para pasajero de 15 años sin acompañante en vuelo con conexión | El formulario de reserva está completamente cargado en [http://tickets.vueling.com](http://tickets.vueling.com). | 1. Completar "Origen" y "Destino" (ej. Valencia a París con escala) y seleccionar la fecha.<br>2. Ingresar datos del pasajero: Nombre, Edad = 15.<br>3. No ingresar datos de adulto.<br>4. Seleccionar un vuelo con conexión.<br>5. Pulsar "Buscar vuelos".           | El sistema muestra "Connecting flights are not allowed for unaccompanied minors" y bloquea la reserva. | ✅/❌   | Caso negativo: la ausencia de acompañante activa la restricción de vuelos con conexión. |
-| TC_R4_012    | Reserva límite: pasajero de 15 años con acompañante en vuelo con conexión       | El formulario de reserva está completamente cargado en [http://tickets.vueling.com](http://tickets.vueling.com). | 1. Completar "Origen" y "Destino" (ej. Valencia a París) y seleccionar la fecha.<br>2. Ingresar datos del pasajero: Nombre, Edad = 15.<br>3. Ingresar datos del adulto acompañante.<br>4. Seleccionar un vuelo con conexión.<br>5. Pulsar "Buscar vuelos".        | La reserva procede, ya que la restricción aplica únicamente a menores sin acompañante.         | ✅/❌   | Caso de límite: verifica que la presencia del adulto permite continuar.       |
-| TC_R4_012.1  | Reserva límite: pasajero de 16 años sin acompañante en vuelo con conexión       | El formulario de reserva está completamente cargado en [http://tickets.vueling.com](http://tickets.vueling.com). | 1. Completar "Origen" y "Destino" (ej. Valencia a París) y seleccionar la fecha.<br>2. Ingresar datos del pasajero: Nombre, Edad = 16.<br>3. No ingresar datos de adulto.<br>4. Seleccionar un vuelo con conexión.<br>5. Pulsar "Buscar vuelos".         | La reserva procede, ya que la restricción aplica únicamente a menores de 16.                     | ✅/❌   | Caso de límite: verifica que un pasajero de 16 años o mayor puede reservar sin acompañante. |
+| ID           | Title                                                                       | Preconditions                                                                                  | Steps                                                                                                                                                                                                                                                                                   | Expected Result                                                      | Status  | Observations                                                                   |
+|--------------|-----------------------------------------------------------------------------|------------------------------------------------------------------------------------------------|-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|----------------------------------------------------------------------|---------|-------------------------------------------------------------------------------|
+| TC_R4_010    | Successful Reservation for a 15-Year-Old Passenger Without Accompaniment on a Direct Flight | The booking form is fully loaded on [http://tickets.vueling.com](http://tickets.vueling.com).      | 1. Fill in "Origin" (e.g., Valencia) and "Destination" (e.g., Seville) and select the flight date.<br>2. Enter passenger details: Name, Age = 15.<br>3. Do not enter accompanying adult information.<br>4. Select a direct (non-stop) flight.<br>5. Click "Search Flights".        | The reservation proceeds without errors, as the connecting flight restriction does not apply.     | ✅/❌   | Positive case: Direct flights are allowed when unaccompanied.                  |
+| TC_R4_011    | Blocked Reservation for a 15-Year-Old Passenger Without Accompaniment on a Connecting Flight | The booking form is fully loaded on [http://tickets.vueling.com](http://tickets.vueling.com).      | 1. Fill in "Origin" and "Destination" (e.g., Valencia to Paris with a stopover) and select the flight date.<br>2. Enter passenger details: Name, Age = 15.<br>3. Do not enter accompanying adult information.<br>4. Select a connecting flight.<br>5. Click "Search Flights".         | The system displays "Connecting flights are not allowed for unaccompanied minors" and blocks the reservation. | ✅/❌   | Negative case: Absence of an accompanying adult triggers the connecting flight restriction. |
+| TC_R4_012    | Boundary Case: 15-Year-Old Passenger With Accompaniment on a Connecting Flight | The booking form is fully loaded on [http://tickets.vueling.com](http://tickets.vueling.com).      | 1. Fill in "Origin" and "Destination" (e.g., Valencia to Paris) and select the flight date.<br>2. Enter passenger details: Name, Age = 15.<br>3. Enter accompanying adult details.<br>4. Select a connecting flight.<br>5. Click "Search Flights".                        | The reservation proceeds, as the restriction applies only to unaccompanied minors.                | ✅/❌   | Boundary case: Verifies that the presence of an accompanying adult allows the booking.         |
+| TC_R4_012.1  | Boundary Case: 16-Year-Old Passenger Without Accompaniment on a Connecting Flight | The booking form is fully loaded on [http://tickets.vueling.com](http://tickets.vueling.com).      | 1. Fill in "Origin" and "Destination" (e.g., Valencia to Paris) and select the flight date.<br>2. Enter passenger details: Name, Age = 16.<br>3. Do not enter accompanying adult information.<br>4. Select a connecting flight.<br>5. Click "Search Flights".                | The reservation proceeds, as the restriction applies only to minors under 16.                     | ✅/❌   | Boundary case: Verifies that a passenger aged 16 or older can book even without accompaniment. |
+
 
 ---
 
