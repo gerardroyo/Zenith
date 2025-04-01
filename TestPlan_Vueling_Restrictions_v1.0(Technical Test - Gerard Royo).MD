@@ -267,8 +267,3 @@ Although this plan focuses on manual testing, it is recommended to evaluate the 
 
 ## 9. Change History
 
-*(Include change history details as per the original document.)*
-
----
-
-**End of Document**
