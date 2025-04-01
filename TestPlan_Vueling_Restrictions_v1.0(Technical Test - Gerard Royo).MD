@@ -4,7 +4,7 @@
 
 ---
 
-## Table of Contents
+## INDEX
 
 1. [Project Data for Vueling’s Ticket Selling Web](#project-data-for-vuelings-ticket-selling-web)
 2. [Introduction and Objectives](#introduction-and-objectives)
@@ -200,24 +200,12 @@ Normally, detailed test case definitions are documented in a separate file or th
 
 ### Business Rule 1: Children Under 12 Must Travel Accompanied by an Adult
 
-#### **TC_R1_001 – Successful Reservation for an 11-Year-Old Child Accompanied**
+| ID         | Título                                             | Precondiciones                                                                         | Pasos                                                                                                                                                                                                                                                                      | Resultado Esperado                                            | Estado  | Observaciones                                                                                         |
+|------------|----------------------------------------------------|----------------------------------------------------------------------------------------|-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|---------------------------------------------------------------|---------|-------------------------------------------------------------------------------------------------------|
+| TC_R1_001  | Reserva exitosa para niño de 11 años acompañado     | El formulario de reserva está completamente cargado en [http://tickets.vueling.com](http://tickets.vueling.com). | 1. Completar el campo "Origen" y "Destino".<br>2. Seleccionar la fecha de vuelo.<br>3. Ingresar datos del pasajero: Nombre, Edad = 11, Nacionalidad (cualquiera).<br>4. Ingresar los datos del adulto acompañante (Nombre, Edad, relación).<br>5. Hacer clic en "Buscar vuelos". | La reserva procede sin errores.                              | ✅/❌   | Caso positivo: el sistema valida que el menor va acompañado. “En caso de defecto, indicar lo sucedido.” |
+| TC_R1_002  | Bloqueo de reserva para niño de 11 años sin acompañante | El formulario de reserva está completamente cargado en [http://tickets.vueling.com](http://tickets.vueling.com). | 1. Completar "Origen" y "Destino" y seleccionar la fecha.<br>2. Ingresar datos del pasajero: Nombre, Edad = 11, Nacionalidad (cualquiera).<br>3. Omitir la sección de adulto acompañante.<br>4. Pulsar "Buscar vuelos".                        | Se muestra el mensaje "El pasajero debe viajar acompañado de un adulto" y la reserva se interrumpe. | ✅/❌   | Caso negativo: ausencia de acompañante provoca bloqueo.                                            |
+| TC_R1_003  | Reserva límite: pasajero de 12 años sin acompañante   | El formulario de reserva está completamente cargado en [http://tickets.vueling.com](http://tickets.vueling.com). | 1. Completar "Origen" y "Destino" y seleccionar la fecha.<br>2. Ingresar datos del pasajero: Nombre, Edad = 12, Nacionalidad (cualquiera).<br>3. No ingresar información de adulto acompañante.<br>4. Pulsar "Buscar vuelos".                | La reserva continúa, asumiendo que la regla aplica para menores estrictamente menores de 12. | ✅/❌   | Caso de límite: se verifica el comportamiento en el límite de edad.                                  |
 
-- **Preconditions:**  
-  - The booking form is fully loaded on [http://tickets.vueling.com](http://tickets.vueling.com).
-
-- **Steps:**  
-  1. Fill in the "Origin" and "Destination" fields.  
-  2. Select the flight date.  
-  3. Enter passenger details: Name, Age = 11, Nationality (any).  
-  4. Enter accompanying adult details (Name, Age, Relationship).  
-  5. Click the "Search Flights" button.
-
-- **Expected Result:**  
-  - The reservation proceeds without errors.
-
-- **Notes:**  
-  - **Positive case:** The system validates that the minor is accompanied.  
-  - *"In case of defect, record what occurred."*
 
 ---
 
