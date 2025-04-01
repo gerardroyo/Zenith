@@ -195,10 +195,6 @@ Although this plan focuses on manual testing, it is recommended to evaluate the 
 
 > **Naming Legend:** `TC_Rx_yyy.y` → **TC** = Test Case, **x** = Business Rule, **yyy** = Test Case Number.
 
-
-**Note:**  
-Normally, detailed test case definitions are documented in a separate file or through a test case management tool such as Jira or TestRail, which allows for a modular and scalable structure. In this Test Plan, the manual test cases are included directly to facilitate review and understanding of the testing scope and strategy in the context of this technical test. It is recommended that in larger projects, these cases be maintained in a separate document or system and linked within the Test Plan for easier maintenance and traceability.
-
 > **Note:** Normally, detailed test case definitions are documented in a separate file or through a test case management tool such as Jira or TestRail, which allows for a modular and scalable structure. In this Test Plan, the manual test cases are included directly to facilitate review and understanding of the testing scope and strategy in the context of this technical test. It is recommended that in larger projects, these cases be maintained in a separate document or system and linked within the Test Plan for easier maintenance and traceability.
 
 ---
