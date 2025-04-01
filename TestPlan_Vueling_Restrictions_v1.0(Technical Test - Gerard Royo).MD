@@ -171,7 +171,6 @@ Although this plan focuses on manual testing, it is recommended to evaluate the 
    - **Final report delivery and test cycle closure:**  
      - **Date:** 14/04/2025  
      - **Activity:** Draft and distribute the final report with conclusions, metrics, and recommendations for the next phase or system adjustments.
-   - **Note:** In case of critical incidents, the schedule may be adjusted.
 
 > **Note:** In case of critical incidents, the schedule may be adjusted.
 
