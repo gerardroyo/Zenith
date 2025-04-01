@@ -18,12 +18,14 @@
 
 ---
 
+> **Note:** In developing this Test Plan, I followed the best practices and guidelines defined by the ISTQB, along with a few personal touches.
+
 ## 1. Project Data for Vueling’s Ticket Selling Web
 
-**Document Version:** 1.0  
-**Date:** 01/04/2025  
-**Author:** Gerard Royo  
-**Stakeholders:** Vueling
+| Version               | Date       | Author      | Canges                 | Stakeholders |
+|-----------------------|------------|-------------|------------------------|--------------|
+| 1.0                   | 01/04/2025 | Gerard Royo | Document creation      | Vueling      |
+
 
 **Project Description:**  
 A web system for selling airline tickets, with specific rules regarding the travel of minors and the validation of insurance rate tariffs in the technical section.
