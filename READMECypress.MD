@@ -95,30 +95,30 @@ El Test Plan Manual se diseñó siguiendo estrictamente las indicaciones del enu
 │   ├── downloads/
 │   │   └── downloads.htm
 │   ├── e2e/
-│   │   └── carRental.spec.js       // Pruebas automatizadas para alquiler de coches
+│   │   └── carRental.spec.js       # Pruebas automatizadas para alquiler de coches
 │   ├── fixtures/
-│   │   └── data.json               // Datos de prueba
+│   │   └── data.json               # Datos de prueba
 │   ├── reports
 │   │   └── mochawesome
-│   │       └── index_001.html      // Reporte generado por Mochawesome
+│   │       └── index_001.html      # Reporte generado por Mochawesome
 │   ├── screenshots
-│   │   └── screenshot.png          // Captura de pantalla en caso de que el caso de prueba falle
+│   │   └── screenshot.png          # Captura de pantalla en caso de que el caso de prueba falle
 │   └── support/
-│       ├── e2e.js                  // Configuracion global
-│       ├── commands.js             // Comandos personalizados
+│       ├── e2e.js                  # Configuracion global
+│       ├── commands.js             # Comandos personalizados
 │       └── pages/
-│           ├── carPage.js          // Page Object para la pagina donde se muestra la descripcion del coche seleccionado
-│           ├── helpers.js          // Funciones helper compartidas
-│           ├── insurancePage.js    //  Page Object para la pagina donde se selecciona el seguro
-│           ├── listCarPage.js      //  Page Object para la pagina donde se listan todos los coches disponibles
-│           ├── paymentPage.js      //  Page Object para la pagina donde se indica la información del conductor y se verifica que seguro se ha escogido
-│           └── searchCarPage.js    //  Page Object para la pagina principal donde se selecciona, ubicación, fechas, edad
-├── cypress.config.js               // Configuración de Cypress y reporter
+│           ├── carPage.js          # Page Object para la pagina donde se muestra la descripcion del coche seleccionado
+│           ├── helpers.js          # Funciones helper compartidas
+│           ├── insurancePage.js    #  Page Object para la pagina donde se selecciona el seguro
+│           ├── listCarPage.js      #  Page Object para la pagina donde se listan todos los coches disponibles
+│           ├── paymentPage.js      #  Page Object para la pagina donde se indica la información del conductor y se verifica que seguro se ha escogido
+│           └── searchCarPage.js    #  Page Object para la pagina principal donde se selecciona, ubicación, fechas, edad
+├── cypress.config.js               # Configuración de Cypress y reporter
 ├── package.json
 ├── package-lock.json
 ├── cypress_log.txt
-├── TestPlan_Vueling_Restrictions_v1.0(Technical Test - Gerard Royo).pdf        // Parte 1 de la prueba técnica en formato PDF
-└── TestPlan_Vueling_Restrictions_v1.0(Technical Test - Gerard Royo).MD         // Parte 1 de la prueba técnica en formato README/Markdown
+├── TestPlan_Vueling_Restrictions_v1.0(Technical Test - Gerard Royo).pdf        # Parte 1 de la prueba técnica en formato PDF
+└── TestPlan_Vueling_Restrictions_v1.0(Technical Test - Gerard Royo).MD         # Parte 1 de la prueba técnica en formato README/Markdown
 
 
 # 4. EJECUCIÓN DE LAS PRUEBAS
