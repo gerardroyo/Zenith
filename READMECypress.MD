@@ -24,7 +24,7 @@ Este documento describe el trabajo realizado para la prueba técnica de Vueling.
 
 ---
 
-# 1. TEST PLAN MANUAL
+# 1. Test plan manual
 
 ### 1.1. Descripción
 El Test Plan Manual se ha elaborado haciendo especial énfasis en las restricciones de viaje para menores de edad. Se desarrolló siguiendo los requerimientos exactos del enunciado y basándose en los lineamientos del ISTQB.
@@ -60,7 +60,7 @@ El Test Plan Manual se diseñó siguiendo estrictamente las indicaciones del enu
 
 # Pruebas automatizadas en Cypress
 
-# 2. TECNOLOGÍAS Y DEPENDENCIAS
+# 2. Tecnologías y dependencias
 
 - **Cypress:** Framework para pruebas end-to-end.
 - **Moment.js:** Manejo y formateo de fechas.
@@ -70,7 +70,7 @@ El Test Plan Manual se diseñó siguiendo estrictamente las indicaciones del enu
 
 ---
 
-# 3. INSTALACIÓN Y CONFIGURACIÓN
+# 3. Instalación y configuración
 
 ### Requisitos Previos
 - Node.js (incluye npm)
@@ -123,7 +123,7 @@ El Test Plan Manual se diseñó siguiendo estrictamente las indicaciones del enu
     └── TestPlan_Vueling_Restrictions_v1.0(Technical Test - Gerard Royo).MD
 
 
-# 4. EJECUCIÓN DE LAS PRUEBAS
+# 4. Ejecución de pruebas
 
 ### Modo Interactivo
 Para abrir Cypress en modo interactivo:
@@ -141,7 +141,7 @@ Para ejecutar los tests en modo headless:
 
 ---
 
-# 5. REPORTES Y CONSOLA
+# 5. Reportes y consola
 
 Las pruebas se integran con cypress-mochawesome-reporter para generar reportes HTML interactivos que incluyen capturas de pantalla en caso de fallo.
 
@@ -188,20 +188,7 @@ Con estos comandos, al ejecutar ``npm run test`` se ejecutarán las pruebas, se 
 
 ---
 
-# 6. PRUEBAS AUTOMATIZADAS EN CYPRESS
-
-Esta parte automatiza la validación de tarifas de seguros en el sistema de alquiler de coches de Vueling. Se han implementado dos casos de prueba independientes:
-
-- **Basic Insurance:** 
-  Se valida que, al seleccionar la tarifa Basic, se navegue correctamente a la página de información del conductor y se refleje el seguro Basic.
-- **Premium Insurance:** 
-  Se valida que, al seleccionar la tarifa Premium, se navegue correctamente y se muestre la opción Premium.
-
-Para evitar duplicación de código, se han creado funciones helper y un Page Object que encapsulan los pasos comunes del flujo de búsqueda y selección de coches, utilizando datos centralizados mediante fixtures.
-
----
-
-# 7. INTEGRACIÓN CI/CD
+# 6. Integracion CI/CD
 
 La automatización de pruebas con Cypress es ideal para integrarse en un pipeline de CI/CD. La integración continua permite:
 
@@ -214,7 +201,7 @@ La automatización de pruebas con Cypress es ideal para integrarse en un pipelin
 
 ---
 
-# 7. COMANDOS RELEVANTES
+# 7. Comandos relevantes
 
 - **Abrir Cypress en modo interactivo:**
     ```
