@@ -90,7 +90,7 @@ El Test Plan Manual se diseñó siguiendo estrictamente las indicaciones del enu
 3. **Estructura del Proyecto**
 
    ```bash
-├──   TECHNICAL TEST VUELING GERARD ROYO/
+   TECHNICAL TEST VUELING GERARD ROYO/
 ├── cypress/
 │   ├── downloads/
 │   │   └── downloads.htm
@@ -118,7 +118,7 @@ El Test Plan Manual se diseñó siguiendo estrictamente las indicaciones del enu
 ├── package-lock.json
 ├── cypress_log.txt
 ├── TestPlan_Vueling_Restrictions_v1.0(Technical Test - Gerard Royo).pdf        # Parte 1 de la prueba técnica en formato PDF
-└── TestPlan_Vueling_Restrictions_v1.0(Technical Test - Gerard Royo).MD         # Parte 1 de la prueba técnica en formato README/Markdown
+└── TestPlan_Vueling_Restrictions_v1.0(Technical Test - Gerard Royo).MD         # Parte 1 de la prueba técnica en formato README/Markdown ```
 
 
 # 4. EJECUCIÓN DE LAS PRUEBAS
