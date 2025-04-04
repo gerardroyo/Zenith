@@ -144,7 +144,8 @@ Para ejecutar los tests desde la línea de comandos:
 
     npx cypress run --headed --browser chrome
 
-> **Nota:** Se ha configurado el viewport a 430x932 para simular un entorno móvil, tal como lo requiere la prueba técnica.
+> **Nota:** <br>
+Se ha configurado el viewport a 430x932 para simular un entorno móvil, tal como lo requiere la prueba técnica.
 
 ---
 
