@@ -128,7 +128,6 @@ El Test Plan Manual se diseñó siguiendo estrictamente las indicaciones del enu
 ### Modo Interactivo
 Para abrir Cypress en modo interactivo:
 
-    ```bash
     npm
 
 Desde la interfaz gráfica, selecciona y ejecuta los tests.
@@ -136,7 +135,6 @@ Desde la interfaz gráfica, selecciona y ejecuta los tests.
 ### Modo Interactivo
 Para ejecutar los tests en modo headless:
 
-    ```bash
     npx cypress run --headed --browser chrome
 
 ---
