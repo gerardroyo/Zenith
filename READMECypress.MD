@@ -78,10 +78,10 @@ Se recomienda integrar estos tests en un pipeline de CI/CD, por ejemplo, utiliza
 # 3. Instalación y configuración
 
 ### Requisitos Previos
-- Node.js (incluye npm)
-- Clonar el repositorio en tu entorno local
+- [Node.js](https://nodejs.org/es) (incluye npm) instalado.
+- Acceso al repositorio de código (clonado en tu máquina local).
 
-### Pasos de Instalación
+### Instalación
 
 1. **Clonar el repositorio:**
 
@@ -89,14 +89,16 @@ Se recomienda integrar estos tests en un pipeline de CI/CD, por ejemplo, utiliza
    git clone <URL_DEL_REPOSITORIO>
    cd <NOMBRE_DEL_REPOSITORIO>
 
-2. **Instalar dependencias:**
+2. **Instalar las dependencias:**
 
    ```bash
     npm install
 
 3. **Estructura del Proyecto**
 
-    ```bash
+La estructura del proyecto se organiza de la siguiente manera:
+
+    ```
     TECHNICAL TEST VUELING GERARD ROYO/
     ├── cypress/
     │   ├── downloads/
