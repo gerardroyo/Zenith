@@ -68,9 +68,9 @@ El Test Plan Manual se diseñó siguiendo estrictamente las indicaciones del enu
 - [**Mochawesome Merge & Marge:**](https://github.com/adamgruber/mochawesome-report-generator) Para unir resultados y generar reportes finales.
 - *(Opcional)* **Herramientas CI/CD:**<br>
 Se recomienda integrar estos tests en un pipeline de CI/CD, por ejemplo, utilizando ``Azure DevOps`` o ``GitHub Actions``, para ejecutar las pruebas de forma automática con cada commit y obtener reportes actualizados.
-  - **¿Por qué CI/CD?**
+  - **¿Por qué CI/CD?**<br>
   Permite validar la calidad del código de forma continua, detectar errores tempranamente y mantener la estabilidad del sistema en entornos de producción.
-  - **Herramientas recomendadas:**
+  - **Herramientas recomendadas:**<br>
   Azure DevOps Pipelines, GitHub Actions, Jenkins, etc.
 
 ---
