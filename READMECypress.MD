@@ -119,7 +119,6 @@ El Test Plan Manual se diseñó siguiendo estrictamente las indicaciones del enu
     ├── cypress_log.txt
     ├── TestPlan_Vueling_Restrictions_v1.0(Technical Test - Gerard Royo).pdf
     └── TestPlan_Vueling_Restrictions_v1.0(Technical Test - Gerard Royo).MD
-```
 
 
 # 4. EJECUCIÓN DE LAS PRUEBAS
