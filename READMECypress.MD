@@ -1,6 +1,6 @@
 # PROYECTO DE PRUEBAS PARA VUELING
 
-Este documento describe el trabajo realizado para la prueba técnica de Vueling. Se han desarrollado dos áreas principales de validación:
+Este documento describe el trabajo realizado para la prueba técnica de Vueling. Se han desarrollado dos áreas principales:
 
 - **Test Plan Manual:**  
   Documento detallado para validar las reglas de negocio en la venta de billetes (especialmente las restricciones de viaje para menores), elaborado siguiendo los requerimientos del enunciado y los lineamientos del ISTQB.
@@ -12,25 +12,24 @@ Este documento describe el trabajo realizado para la prueba técnica de Vueling.
 
 # ÍNDICE
 
-1. [Test Plan Manual](#test-plan-manual)  
-2. [Descripción del Proyecto](#descripción-del-proyecto)  
-3. [Tecnologías y Dependencias](#tecnologías-y-dependencias)  
-4. [Instalación y Configuración](#instalación-y-configuración)  
-5. [Ejecución de las Pruebas](#ejecución-de-las-pruebas)  
-6. [Reportes y Consola](#reportes-y-consola)  
-7. [Pruebas Automatizadas en Cypress](#pruebas-automatizadas-en-cypress)  
-8. [Integración CI/CD](#integración-cicd)  
-9. [Comandos Relevantes](#comandos-relevantes)  
-10. [Conclusiones](#conclusiones)
+1. [Test Plan Manual](#test-plan-manual)   
+2. [Tecnologías y Dependencias](#tecnologías-y-dependencias)  
+3. [Instalación y Configuración](#instalación-y-configuración)  
+4. [Ejecución de las Pruebas](#ejecución-de-las-pruebas)  
+5. [Reportes y Consola](#reportes-y-consola)  
+6. [Pruebas Automatizadas en Cypress](#pruebas-automatizadas-en-cypress)  
+7. [Integración CI/CD](#integración-cicd)  
+8. [Comandos Relevantes](#comandos-relevantes)  
+9. [Conclusiones](#conclusiones)
 
 ---
 
-# 3. TEST PLAN MANUAL
+# 1. TEST PLAN MANUAL
 
-### 3.1. Descripción
-El Test Plan Manual se ha elaborado para validar la correcta implementación de las reglas de negocio en el sistema de venta de billetes de Vueling, haciendo especial énfasis en las restricciones de viaje para menores de edad. Se desarrolló siguiendo los requerimientos exactos del enunciado y basándose en los lineamientos del ISTQB.
+### 1.1. Descripción
+El Test Plan Manual se ha elaborado haciendo especial énfasis en las restricciones de viaje para menores de edad. Se desarrolló siguiendo los requerimientos exactos del enunciado y basándose en los lineamientos del ISTQB.
 
-### 3.2. Estructura del Test Plan
+### 1.2. Estructura del Test Plan
 El documento se organiza en las siguientes secciones:
 - **Datos del Proyecto:** Información básica y contexto del sistema.
 - **Introducción y Objetivos:** Se definen el contexto y los objetivos, como verificar que la aplicación impida reservas incorrectas y ofrezca mensajes claros.
@@ -39,7 +38,13 @@ El documento se organiza en las siguientes secciones:
 - **Planificación y Gestión de Riesgos:** Se presenta el cronograma, hitos clave y estrategias de mitigación ante cambios o incidencias en el entorno.
 - **Definición de Casos de Prueba:** Cada caso se documenta con un identificador, precondiciones, pasos detallados, resultados esperados y observaciones, garantizando trazabilidad y claridad en el proceso de validación.
 
-### 3.3. ¿Por qué se diseñó de esta manera?
+Nota: Normally, detailed test case definitions are documented in a separate file or through a test case management tool such as Jira or 
+TestRail, which allows for a modular and scalable structure. In this Test Plan, the manual test cases are included directly to facilitate 
+review and understanding of the testing scope and strategy in the context of this technical test. 
+It is recommended that in larger projects, these cases be maintained in a separate document or system and linked within the Test 
+Plan to ease maintenance and traceability. 
+
+### 1.3. ¿Por qué se diseñó de esta manera?
 El Test Plan Manual se diseñó siguiendo estrictamente las indicaciones del enunciado, asegurando:
 
 - **Cumplimiento de Requisitos:**  
@@ -53,19 +58,7 @@ El Test Plan Manual se diseñó siguiendo estrictamente las indicaciones del enu
 
 ---
 
-# 4. DESCRIPCIÓN DEL PROYECTO
-
-El proyecto aborda dos áreas clave de pruebas para los sistemas de Vueling:
-
-- **Venta de Billetes (Test Plan Manual):**  
-  Validación manual de las restricciones de viaje para menores, asegurando que se cumplan las políticas de acompañamiento definidas.
-
-- **Alquiler de Coches (Pruebas Automatizadas en Cypress):**  
-  Automatización de pruebas para validar la selección de tarifas de seguros (Basic y Premium) y la navegación a la página de información del conductor.
-
----
-
-# 5. TECNOLOGÍAS Y DEPENDENCIAS
+# 2. TECNOLOGÍAS Y DEPENDENCIAS
 
 - **Cypress:** Framework para pruebas end-to-end.
 - **Moment.js:** Manejo y formateo de fechas.
@@ -75,7 +68,7 @@ El proyecto aborda dos áreas clave de pruebas para los sistemas de Vueling:
 
 ---
 
-# 6. INSTALACIÓN Y CONFIGURACIÓN
+# 3. INSTALACIÓN Y CONFIGURACIÓN
 
 ### Requisitos Previos
 - Node.js (incluye npm)
@@ -88,3 +81,52 @@ El proyecto aborda dos áreas clave de pruebas para los sistemas de Vueling:
    ```bash
    git clone <URL_DEL_REPOSITORIO>
    cd <NOMBRE_DEL_REPOSITORIO>
+
+2. **Instalar dependencias:**
+
+   ```bash
+   npm install
+
+3. **Estructura del Proyecto**
+
+   ```bash
+   TECHNICAL TEST VUELING GERARD ROYO/
+├── cypress/
+│   ├── downloads/
+│   │   └── downloads.htm
+│   ├── e2e/
+│   │   └── carRental.spec.js       // Pruebas automatizadas para alquiler de coches
+│   ├── fixtures/
+│   │   └── data.json               // Datos de prueba
+│   ├── reports
+│   │   └── mochawesome
+│   │       └── index_001.html      // Reporte generado por Mochawesome
+│   ├── screenshots
+│   │   └── screenshot.png          // Captura de pantalla en caso de que el caso de prueba falle
+│   └── support/
+│       ├── e2e.js                  // Configuracion global
+│       ├── commands.js             // Comandos personalizados
+│       └── pages/
+│           ├── carPage.js          // Page Object para la pagina donde se muestra la descripcion del coche seleccionado
+│           ├── helpers.js          // Funciones helper compartidas
+│           ├── insurancePage.js    //  Page Object para la pagina donde se selecciona el seguro
+│           ├── listCarPage.js      //  Page Object para la pagina donde se listan todos los coches disponibles
+│           ├── paymentPage.js      //  Page Object para la pagina donde se indica la información del conductor y se verifica que seguro se ha escogido
+│           └── searchCarPage.js    //  Page Object para la pagina principal donde se selecciona, ubicación, fechas, edad
+├── cypress.config.js               // Configuración de Cypress y reporter
+├── package.json
+├── package-lock.json
+├── cypress_log.txt
+├── TestPlan_Vueling_Restrictions_v1.0(Technical Test - Gerard Royo).pdf        // Parte 1 de la prueba técnica en formato PDF
+└── TestPlan_Vueling_Restrictions_v1.0(Technical Test - Gerard Royo).MD         // Parte 1 de la prueba técnica en formato README/Markdown
+
+
+# 4. EJECUCIÓN DE LAS PRUEBAS
+
+### Modo Interactivo
+    Para abrir Cypress en modo interactivo:
+
+    ```bash
+    npm
+
+
