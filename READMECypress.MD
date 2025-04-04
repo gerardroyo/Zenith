@@ -90,7 +90,7 @@ El Test Plan Manual se diseñó siguiendo estrictamente las indicaciones del enu
 3. **Estructura del Proyecto**
 
    ```bash
-   TECHNICAL TEST VUELING GERARD ROYO/
+├──   TECHNICAL TEST VUELING GERARD ROYO/
 ├── cypress/
 │   ├── downloads/
 │   │   └── downloads.htm
