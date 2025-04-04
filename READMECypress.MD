@@ -124,7 +124,7 @@ El Test Plan Manual se diseñó siguiendo estrictamente las indicaciones del enu
 # 4. EJECUCIÓN DE LAS PRUEBAS
 
 ### Modo Interactivo
-    Para abrir Cypress en modo interactivo:
+Para abrir Cypress en modo interactivo:
 
     ```bash
     npm
