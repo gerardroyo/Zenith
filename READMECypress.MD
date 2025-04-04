@@ -145,7 +145,6 @@ Las pruebas se integran con cypress-mochawesome-reporter para generar reportes H
 
 ### Configuración del Reporter en ``cypress.config.js``:
 
-    
     const { defineConfig } = require('cypress');
     const mochawesomeReporter = require('cypress-mochawesome-reporter/plugin');
 
