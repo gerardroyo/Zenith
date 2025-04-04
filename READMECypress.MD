@@ -129,4 +129,18 @@ Para abrir Cypress en modo interactivo:
     ```bash
     npm
 
+Desde la interfaz gráfica, selecciona y ejecuta los tests.
 
+### Modo Interactivo
+Para ejecutar los tests en modo headless:
+
+    ```bash
+    npx cypress run --headed --browser chrome
+
+---
+
+# 4. REPORTES Y CONSOLA
+
+Las pruebas se integran con cypress-mochawesome-reporter para generar reportes HTML interactivos que incluyen capturas de pantalla en caso de fallo.
+
+### Configuración del Reporter en ``cypress.config.js``:
