@@ -98,7 +98,6 @@ Se recomienda integrar estos tests en un pipeline de CI/CD, por ejemplo, utiliza
 
 La estructura del proyecto se organiza de la siguiente manera:
 
-    ```
     TECHNICAL TEST VUELING GERARD ROYO/
     ├── cypress/
     │   ├── downloads/
@@ -130,19 +129,21 @@ La estructura del proyecto se organiza de la siguiente manera:
     └── TestPlan_Vueling_Restrictions_v1.0(Technical Test - Gerard Royo).MD
 
 
-# 4. Ejecución de pruebas
+# 4. Ejecución de las pruebas
 
 ### Modo Interactivo
-Para abrir Cypress en modo interactivo:
+Para abrir la interfaz gráfica de Cypress:
 
-    npm
+    npx cypress open
 
-Desde la interfaz gráfica, selecciona y ejecuta los tests.
+Desde la interfaz, podrás seleccionar y ejecutar los tests y ver el "Command Log" en tiempo real.
 
-### Modo Interactivo
-Para ejecutar los tests en modo headless:
+### Modo Headless
+Para ejecutar los tests desde la línea de comandos:
 
     npx cypress run --headed --browser chrome
+
+> **Nota:** Se ha configurado el viewport a 430x932 para simular un entorno móvil, tal como lo requiere la prueba técnica.
 
 ---
 
