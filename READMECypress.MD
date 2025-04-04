@@ -38,7 +38,8 @@ El documento se organiza en las siguientes secciones:
 - **Planificación y Gestión de Riesgos:** Se presenta el cronograma, hitos clave y estrategias de mitigación ante cambios o incidencias en el entorno.
 - **Definición de Casos de Prueba:** Cada caso se documenta con un identificador, precondiciones, pasos detallados, resultados esperados y observaciones, garantizando trazabilidad y claridad en el proceso de validación.
 
-Nota: Normally, detailed test case definitions are documented in a separate file or through a test case management tool such as Jira or 
+> **Nota**: <br>
+Normally, detailed test case definitions are documented in a separate file or through a test case management tool such as Jira or 
 TestRail, which allows for a modular and scalable structure. In this Test Plan, the manual test cases are included directly to facilitate 
 review and understanding of the testing scope and strategy in the context of this technical test. 
 It is recommended that in larger projects, these cases be maintained in a separate document or system and linked within the Test 
@@ -244,5 +245,5 @@ Automatizar la ejecución de pruebas en un pipeline CI/CD ayuda a:
   - **Configuración de Reportes:** Integración con cypress-mochawesome-reporter para generar reportes interactivos.
   - **Manejo de Errores:** Configuración de ``screenshotOnRunFailure`` y manejo global de excepciones.
   - **Configuración Móvil:** Uso de ``viewport`` para simular dispositivos móviles según lo solicitado.
-  
+
 ---
