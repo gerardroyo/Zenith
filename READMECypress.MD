@@ -63,10 +63,15 @@ El Test Plan Manual se diseñó siguiendo estrictamente las indicaciones del enu
 # 2. Tecnologías y dependencias
 
 - [**Cypress:**](https://www.cypress.io) Framework de automatización para pruebas end-to-end.
-- **Moment.js:** Manejo y formateo de fechas.
-- **cypress-mochawesome-reporter:** Genera reportes HTML interactivos con capturas de pantalla embebidas.
-- **Mochawesome Merge & Marge:** Para unir resultados y generar reportes finales.
-- *(Opcional)* **Herramientas CI/CD:** Azure DevOps Pipelines, GitHub Actions, etc.
+- [**Moment.js:**](https://momentjs.com) Manejo y formateo de fechas.
+- [**cypress-mochawesome-reporter:**](https://github.com/LironEr/cypress-mochawesome-reporter) Genera reportes HTML interactivos con capturas de pantalla embebidas.
+- [**Mochawesome Merge & Marge:**](https://github.com/adamgruber/mochawesome-report-generator) Para unir resultados y generar reportes finales.
+- *(Opcional)* **Herramientas CI/CD:** 
+Se recomienda integrar estos tests en un pipeline de CI/CD, por ejemplo, utilizando ``Azure DevOps`` o ``GitHub Actions``, para ejecutar las pruebas de forma automática con cada commit y obtener reportes actualizados.
+  - **¿Por qué CI/CD?**
+  Permite validar la calidad del código de forma continua, detectar errores tempranamente y mantener la estabilidad del sistema en entornos de producción.
+  - **Herramientas recomendadas:**
+  Azure DevOps Pipelines, GitHub Actions, Jenkins, etc.
 
 ---
 
