@@ -227,6 +227,5 @@ La automatización de pruebas con Cypress es ideal para integrarse en un pipelin
     ```
     npx mochawesome-merge cypress/reports/mochawesome/*.json -o mochawesome.json
     npx marge mochawesome.json -o cypress/reports/mochawesome
-
 ---
 
