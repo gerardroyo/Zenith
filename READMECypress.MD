@@ -119,6 +119,7 @@ TECHNICAL TEST VUELING GERARD ROYO/
 ├── cypress_log.txt
 ├── TestPlan_Vueling_Restrictions_v1.0(Technical Test - Gerard Royo).pdf
 └── TestPlan_Vueling_Restrictions_v1.0(Technical Test - Gerard Royo).MD
+    ```
 
 
 # 4. EJECUCIÓN DE LAS PRUEBAS
