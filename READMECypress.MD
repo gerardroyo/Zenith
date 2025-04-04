@@ -90,35 +90,35 @@ El Test Plan Manual se diseñó siguiendo estrictamente las indicaciones del enu
 3. **Estructura del Proyecto**
 
     ```bash
-TECHNICAL TEST VUELING GERARD ROYO/
-├── cypress/
-│   ├── downloads/
-│   │   └── downloads.htm
-│   ├── e2e/
-│   │   └── carRental.spec.js
-│   ├── fixtures/
-│   │   └── data.json
-│   ├── reports
-│   │   └── mochawesome
-│   │       └── index_001.html
-│   ├── screenshots
-│   │   └── screenshot.png
-│   └── support/
-│       ├── e2e.js
-│       ├── commands.js
-│       └── pages/
-│           ├── carPage.js
-│           ├── helpers.js
-│           ├── insurancePage.js
-│           ├── listCarPage.js
-│           ├── paymentPage.js
-│           └── searchCarPage.js
-├── cypress.config.js
-├── package.json
-├── package-lock.json
-├── cypress_log.txt
-├── TestPlan_Vueling_Restrictions_v1.0(Technical Test - Gerard Royo).pdf
-└── TestPlan_Vueling_Restrictions_v1.0(Technical Test - Gerard Royo).MD
+    TECHNICAL TEST VUELING GERARD ROYO/
+    ├── cypress/
+    │   ├── downloads/
+    │   │   └── downloads.htm
+    │   ├── e2e/
+    │   │   └── carRental.spec.js
+    │   ├── fixtures/
+    │   │   └── data.json
+    │   ├── reports
+    │   │   └── mochawesome
+    │   │       └── index_001.html
+    │   ├── screenshots
+    │   │   └── screenshot.png
+    │   └── support/
+    │       ├── e2e.js
+    │       ├── commands.js
+    │       └── pages/
+    │           ├── carPage.js
+    │           ├── helpers.js
+    │           ├── insurancePage.js
+    │           ├── listCarPage.js
+    │           ├── paymentPage.js
+    │           └── searchCarPage.js
+    ├── cypress.config.js
+    ├── package.json
+    ├── package-lock.json
+    ├── cypress_log.txt
+    ├── TestPlan_Vueling_Restrictions_v1.0(Technical Test - Gerard Royo).pdf
+    └── TestPlan_Vueling_Restrictions_v1.0(Technical Test - Gerard Royo).MD
 ```
 
 
