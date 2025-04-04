@@ -150,7 +150,7 @@ Se ha configurado el viewport a 430x932 para simular un entorno móvil, tal como
 
 # 5. Generación de Reportes con Mochawesome
 
-El proyecto utiliza ``cypress-mochawesome-reporter`` para generar reportes interactivos en formato HTML con capturas de pantalla embebidas.
+El proyecto utiliza ``cypress-mochawesome-reporter`` para generar reportes interactivos en formato HTML con capturas de pantalla embebidas. <br>
 Se ha elegido esta opcion por encima de la predeterminada de Cypress principalmente porque tienes un archivo HTML que para momentos de presentación de reportes se hace mucho más agil y ademas Mochawesome muestra los datos del resultado de manera más clara y con más funcionalidades.
 
 ### Configuración del Reporter en ``cypress.config.js``:
