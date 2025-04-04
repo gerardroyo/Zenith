@@ -147,9 +147,9 @@ Para ejecutar los tests desde la línea de comandos:
 
 ---
 
-# 5. Reportes y consola
+# 5. Generación de Reportes con Mochawesome
 
-Las pruebas se integran con cypress-mochawesome-reporter para generar reportes HTML interactivos que incluyen capturas de pantalla en caso de fallo.
+El proyecto utiliza ``cypress-mochawesome-reporter`` para generar reportes interactivos en formato HTML con capturas de pantalla embebidas.
 
 ### Configuración del Reporter en ``cypress.config.js``:
 
@@ -179,35 +179,22 @@ Las pruebas se integran con cypress-mochawesome-reporter para generar reportes H
         },
     });
 
-### Automatización de la Generación del Reporte
+### Generación Automática del Reporte
 
-Se han configurado los siguientes scripts en el ``package.json`` para que, al ejecutar ``npm run test``, se ejecuten los tests, se fusionen los resultados y se abra el reporte HTML automáticamente:
+Para automatizar la generación del reporte HTML tras ejecutar los tests, se han configurado scripts en el ``package.json``:
 
     {
       "scripts": {
         "test": "npx cypress run --headed --browser chrome && npm run generate-report",
-        "generate-report": "npx mochawesome-merge cypress/reports/mochawesome/*.json -o mochawesome.json && npx marge mochawesome.json -o cypress/reports/mochawesome && start cypress/reports/mochawesome/mochawesome.html"
+        "generate-report": "npx marge mochawesome.json -o cypress/reports/mochawesome && start cypress/reports/mochawesome/mochawesome.html"
       }
     }
 
-Con estos comandos, al ejecutar ``npm run test`` se ejecutarán las pruebas, se fusionarán los resultados y se abrirá el reporte HTML automáticamente.
+Con este comando, al ejecutar ``npm run test`` se ejecutarán los tests, se fusionarán los archivos JSON y se generará el reporte HTML que se abrirá automáticamente en el navegador.
 
 ---
 
-# 6. Integracion CI/CD
-
-La automatización de pruebas con Cypress es ideal para integrarse en un pipeline de CI/CD. La integración continua permite:
-
-- **Ejecución Continua:**  Automatizar la ejecución de pruebas en cada commit o pull request, detectando errores de forma temprana.
-- **Consistencia y Calidad:**  Garantizar que los tests se ejecuten en entornos uniformes y reproducibles.
-- **Herramientas Recomendadas:**
-  - **Azure DevOps Pipelines:** Configurable para ejecutar Cypress y generar reportes con Mochawesome.+
-  - **GitHub Actions:** Una opción popular para integrar pruebas automatizadas en repositorios de GitHub.
-  - **Jenkins, CircleCI, etc.:** Alternativas válidas según el entorno.
-
----
-
-# 7. Comandos relevantes
+# 6. Comandos relevantes
 
 - **Abrir Cypress en modo interactivo:**
     ```
@@ -220,6 +207,19 @@ La automatización de pruebas con Cypress es ideal para integrarse en un pipelin
     npx cypress cache clear
 - **Generar reporte Mochawesome (si no se automatiza en el script):**
     ```
-    npx mochawesome-merge cypress/reports/mochawesome/*.json -o mochawesome.json
     npx marge mochawesome.json -o cypress/reports/mochawesome
+
+---
+
+# 7. Comandos de Consola Relevantes
+
+La automatización de pruebas con Cypress es ideal para integrarse en un pipeline de CI/CD. La integración continua permite:
+
+- **Ejecución Continua:**  Automatizar la ejecución de pruebas en cada commit o pull request, detectando errores de forma temprana.
+- **Consistencia y Calidad:**  Garantizar que los tests se ejecuten en entornos uniformes y reproducibles.
+- **Herramientas Recomendadas:**
+  - **Azure DevOps Pipelines:** Configurable para ejecutar Cypress y generar reportes con Mochawesome.+
+  - **GitHub Actions:** Una opción popular para integrar pruebas automatizadas en repositorios de GitHub.
+  - **Jenkins, CircleCI, etc.:** Alternativas válidas según el entorno.
+
 ---
