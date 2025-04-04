@@ -62,7 +62,7 @@ El Test Plan Manual se diseñó siguiendo estrictamente las indicaciones del enu
 
 # 2. Tecnologías y dependencias
 
-- **Cypress:** Framework para pruebas end-to-end.
+- [**Cypress:**](https://www.cypress.io) Framework de automatización para pruebas end-to-end.
 - **Moment.js:** Manejo y formateo de fechas.
 - **cypress-mochawesome-reporter:** Genera reportes HTML interactivos con capturas de pantalla embebidas.
 - **Mochawesome Merge & Marge:** Para unir resultados y generar reportes finales.
