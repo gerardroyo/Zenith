@@ -170,3 +170,7 @@ Las pruebas se integran con cypress-mochawesome-reporter para generar reportes H
             viewportHeight: 932
         },
     });
+
+### Automatización de la Generación del Reporte
+
+Se han configurado los siguientes scripts en el ``package.json`` para que, al ejecutar ``npm run test``, se ejecuten los tests, se fusionen los resultados y se abra el reporte HTML automáticamente:
