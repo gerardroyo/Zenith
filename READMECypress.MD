@@ -24,7 +24,7 @@ Este documento describe el trabajo realizado para la prueba técnica de Vueling.
 
 ---
 
-# 1. Test plan manual
+# 1. Test Plan Manual
 
 ### 1.1. Descripción
 El Test Plan Manual se ha elaborado haciendo especial énfasis en las restricciones de viaje para menores de edad. Se desarrolló siguiendo los requerimientos exactos del enunciado y basándose en los lineamientos del ISTQB.
@@ -61,7 +61,7 @@ El Test Plan Manual se diseñó siguiendo estrictamente las indicaciones del enu
 
 # Pruebas automatizadas en Cypress
 
-# 2. Tecnologías y dependencias
+# 2. Tecnologías y Dependencias
 
 - [**Cypress:**](https://www.cypress.io) Framework de automatización para pruebas end-to-end.
 - [**Moment.js:**](https://momentjs.com) Manejo y formateo de fechas.
