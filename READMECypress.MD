@@ -12,15 +12,14 @@ Este documento describe el trabajo realizado para la prueba técnica de Vueling.
 
 # Índice
 
-1. [Test Plan Manual](#test-plan-manual)   
-2. [Tecnologías y Dependencias](#tecnologías-y-dependencias)  
-3. [Instalación y Configuración](#instalación-y-configuración)  
-4. [Ejecución de las Pruebas](#ejecución-de-las-pruebas)  
-5. [Reportes y Consola](#reportes-y-consola)  
-6. [Pruebas Automatizadas en Cypress](#pruebas-automatizadas-en-cypress)  
-7. [Integración CI/CD](#integración-cicd)  
-8. [Comandos Relevantes](#comandos-relevantes)  
-9. [Conclusiones](#conclusiones)
+1. [Test plan manual](#1-test-plan-manual)   
+2. [Tecnologías y dependencias](#2-tecnologías-y-dependencias)  
+3. [Instalación y configuración](#3-instalación-y-configuración)  
+4. [Ejecución de las pruebas](#4-ejecución-de-las-pruebas)  
+5. [Generación de Reportes con Mochawesome](#5-generación-de-reportes-con-mochawesome)  
+6. [Comandos relevantes](#6-comandos-relevantes)  
+7. [Comandos de Consola Relevantes](#7-comandos-de-consola-relevantes)  
+8. [Resumen de lo Automatizado](#8-resumen-de-lo-automatizado)  
 
 ---
 
