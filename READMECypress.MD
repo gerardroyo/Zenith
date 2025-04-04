@@ -139,8 +139,35 @@ Para ejecutar los tests en modo headless:
 
 ---
 
-# 4. REPORTES Y CONSOLA
+# 5. REPORTES Y CONSOLA
 
 Las pruebas se integran con cypress-mochawesome-reporter para generar reportes HTML interactivos que incluyen capturas de pantalla en caso de fallo.
 
 ### Configuración del Reporter en ``cypress.config.js``:
+
+    ```javascript
+    const { defineConfig } = require('cypress');
+    const mochawesomeReporter = require('cypress-mochawesome-reporter/plugin');
+
+    module.exports = defineConfig({
+    e2e: {
+        setupNodeEvents(on, config) {
+        console.log("cypress-mochawesome-reporter setup called");
+        mochawesomeReporter(on, config);
+        return config;
+        },
+        specPattern: "cypress/e2e/**/*.{js,jsx,ts,tsx}",
+        reporter: "cypress-mochawesome-reporter",
+        reporterOptions: {
+        reportDir: "cypress/reports/mochawesome",
+        overwrite: false,
+        html: true,
+        json: true,
+        embeddedScreenshots: true,
+        inlineAssets: true
+        },
+        screenshotOnRunFailure: true,
+        viewportWidth: 430,
+        viewportHeight: 932
+    },
+    });
