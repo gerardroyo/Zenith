@@ -214,11 +214,35 @@ Con este comando, al ejecutar ``npm run test`` se ejecutarán los tests, se fusi
 
 La automatización de pruebas con Cypress es ideal para integrarse en un pipeline de CI/CD. La integración continua permite:
 
-- **Ejecución Continua:**  Automatizar la ejecución de pruebas en cada commit o pull request, detectando errores de forma temprana.
-- **Consistencia y Calidad:**  Garantizar que los tests se ejecuten en entornos uniformes y reproducibles.
+- **Ejecución Continua:**<br>
+Permite ejecutar los tests automáticamente en cada commit o pull request, detectando errores antes de que se integren en producción.
+- **Consistencia y Calidad:**<br>
+Garantiza que el código se pruebe de forma consistente y se mantenga la calidad en cada iteración.
 - **Herramientas Recomendadas:**
   - **Azure DevOps Pipelines:** Configurable para ejecutar Cypress y generar reportes con Mochawesome.+
   - **GitHub Actions:** Una opción popular para integrar pruebas automatizadas en repositorios de GitHub.
   - **Jenkins, CircleCI, etc.:** Alternativas válidas según el entorno.
+- **¿Por qué hacerlo?**
+Automatizar la ejecución de pruebas en un pipeline CI/CD ayuda a:
+  - Reducir el tiempo de feedback.
+  - Minimizar el riesgo de introducir errores en producción.
+  - Facilitar el seguimiento de la calidad del software a lo largo del tiempo.
 
+---
+
+# 8. Resumen de lo Automatizado
+
+- **Flujo de Búsqueda de Alquiler de Coches:**
+  - Navegación a la URL, aceptación de cookies y llenado de formulario (ubicación, fechas, rango de edad).
+  - Ejecución de búsqueda y validación de la selección del coche (filtrado por SUV).
+  - Validación de la selección de la tarifa de seguro (Basic o Premium) y navegación a la página de información del conductor.
+  - Captura automática de screenshots en caso de fallo y generación de reportes detallados con Mochawesome.
+- **Mejores Prácticas Aplicadas:**
+  - **Page Object Model (POM):** Separar la lógica de interacción con la UI en objetos.
+  - **Funciones Helpers:** Centralizar los pasos comunes del flujo.
+  - **Uso de Fixtures:** Para manejar datos de prueba de forma centralizada.
+  - **Configuración de Reportes:** Integración con cypress-mochawesome-reporter para generar reportes interactivos.
+  - **Manejo de Errores:** Configuración de ``screenshotOnRunFailure`` y manejo global de excepciones.
+  - **Configuración Móvil:** Uso de ``viewport`` para simular dispositivos móviles según lo solicitado.
+  
 ---
