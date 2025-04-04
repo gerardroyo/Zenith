@@ -174,3 +174,38 @@ Las pruebas se integran con cypress-mochawesome-reporter para generar reportes H
 ### Automatización de la Generación del Reporte
 
 Se han configurado los siguientes scripts en el ``package.json`` para que, al ejecutar ``npm run test``, se ejecuten los tests, se fusionen los resultados y se abra el reporte HTML automáticamente:
+
+    {
+      "scripts": {
+        "test": "npx cypress run --headed --browser chrome && npm run generate-report",
+        "generate-report": "npx mochawesome-merge cypress/reports/mochawesome/*.json -o mochawesome.json && npx marge mochawesome.json -o cypress/reports/mochawesome && start cypress/reports/mochawesome/mochawesome.html"
+      }
+    }
+
+Con estos comandos, al ejecutar ``npm run test`` se ejecutarán las pruebas, se fusionarán los resultados y se abrirá el reporte HTML automáticamente.
+
+---
+
+# 6. PRUEBAS AUTOMATIZADAS EN CYPRESS
+
+Esta parte automatiza la validación de tarifas de seguros en el sistema de alquiler de coches de Vueling. Se han implementado dos casos de prueba independientes:
+
+- **Basic Insurance:** 
+  Se valida que, al seleccionar la tarifa Basic, se navegue correctamente a la página de información del conductor y se refleje el seguro Basic.
+- **Premium Insurance:** 
+  Se valida que, al seleccionar la tarifa Premium, se navegue correctamente y se muestre la opción Premium.
+
+Para evitar duplicación de código, se han creado funciones helper y un Page Object que encapsulan los pasos comunes del flujo de búsqueda y selección de coches, utilizando datos centralizados mediante fixtures.
+
+---
+
+# 7. INTEGRACIÓN CI/CD
+
+La automatización de pruebas con Cypress es ideal para integrarse en un pipeline de CI/CD. La integración continua permite:
+
+- **Ejecución Continua:**  Automatizar la ejecución de pruebas en cada commit o pull request, detectando errores de forma temprana.
+- **Consistencia y Calidad:**  Garantizar que los tests se ejecuten en entornos uniformes y reproducibles.
+- **Herramientas Recomendadas:**
+  - **Azure DevOps Pipelines:** Configurable para ejecutar Cypress y generar reportes con Mochawesome.+
+  - **GitHub Actions:** Una opción popular para integrar pruebas automatizadas en repositorios de GitHub.
+  - **Jenkins, CircleCI, etc.:** Alternativas válidas según el entorno.
