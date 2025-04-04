@@ -209,3 +209,20 @@ La automatización de pruebas con Cypress es ideal para integrarse en un pipelin
   - **Azure DevOps Pipelines:** Configurable para ejecutar Cypress y generar reportes con Mochawesome.+
   - **GitHub Actions:** Una opción popular para integrar pruebas automatizadas en repositorios de GitHub.
   - **Jenkins, CircleCI, etc.:** Alternativas válidas según el entorno.
+
+---
+
+# 7. COMANDOS RELEVANTES
+
+- **Abrir Cypress en modo interactivo:**
+    npx cypress open
+- **Ejecutar tests en modo headless:**
+    npx cypress run --headed --browser chrome
+- **Limpiar caché de Cypress:**
+    npx cypress cache clear
+- **Generar reporte Mochawesome (si no se automatiza en el script):**
+    npx mochawesome-merge cypress/reports/mochawesome/*.json -o mochawesome.json
+    npx marge mochawesome.json -o cypress/reports/mochawesome
+
+---
+
