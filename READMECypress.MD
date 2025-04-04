@@ -1,4 +1,4 @@
-# 1. PROYECTO DE PRUEBAS PARA VUELING
+# PROYECTO DE PRUEBAS PARA VUELING
 
 Este documento describe el trabajo realizado para la prueba técnica de Vueling. Se han desarrollado dos áreas principales de validación:
 
@@ -10,7 +10,7 @@ Este documento describe el trabajo realizado para la prueba técnica de Vueling.
 
 ---
 
-# 2. ÍNDICE
+# ÍNDICE
 
 1. [Test Plan Manual](#test-plan-manual)  
 2. [Descripción del Proyecto](#descripción-del-proyecto)  
