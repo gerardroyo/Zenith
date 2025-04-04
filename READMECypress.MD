@@ -85,11 +85,11 @@ El Test Plan Manual se diseñó siguiendo estrictamente las indicaciones del enu
 2. **Instalar dependencias:**
 
    ```bash
-   npm install
+    npm install
 
 3. **Estructura del Proyecto**
 
-    ```bash
+    ```kotlin
 TECHNICAL TEST VUELING GERARD ROYO/
 ├── cypress/
 │   ├── downloads/
