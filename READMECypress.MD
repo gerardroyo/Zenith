@@ -208,7 +208,6 @@ Con este comando, al ejecutar ``npm run test`` se ejecutarán los tests, se fusi
 - **Generar reporte Mochawesome (si no se automatiza en el script):**
     ```
     npx marge mochawesome.json -o cypress/reports/mochawesome
-
 ---
 
 # 7. Comandos de Consola Relevantes
