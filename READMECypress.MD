@@ -60,8 +60,6 @@ El Test Plan Manual se diseñó siguiendo estrictamente las indicaciones del enu
 
 # Pruebas automatizadas en Cypress
 
----
-
 # 2. TECNOLOGÍAS Y DEPENDENCIAS
 
 - **Cypress:** Framework para pruebas end-to-end.
