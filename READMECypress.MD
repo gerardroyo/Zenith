@@ -32,7 +32,7 @@ El Test Plan Manual se ha elaborado haciendo especial énfasis en las restriccio
 El documento se organiza en las siguientes secciones:
 - **Datos del Proyecto:** Información básica y contexto del sistema.
 - **Introducción y Objetivos:** Se definen el contexto y los objetivos, como verificar que la aplicación impida reservas incorrectas y ofrezca mensajes claros.
-- **Alcance de las Pruebas:** Se detalla qué funcionalidades se validan (por ejemplo, las restricciones de acompañamiento para menores) y qué aspectos quedan fuera (por ejemplo, rendimiento o seguridad).
+- **Alcance de las Pruebas:** Se detalla qué funcionalidades se validan y qué aspectos quedan fuera (por ejemplo, rendimiento o seguridad).
 - **Estrategia y Enfoque:** Se describen las metodologías utilizadas (pruebas funcionales, de valores límite y exploratorias basadas en técnicas de caja negra).
 - **Planificación y Gestión de Riesgos:** Se presenta el cronograma, hitos clave y estrategias de mitigación ante cambios o incidencias en el entorno.
 - **Definición de Casos de Prueba:** Cada caso se documenta con un identificador, precondiciones, pasos detallados, resultados esperados y observaciones, garantizando trazabilidad y claridad en el proceso de validación.
@@ -151,6 +151,7 @@ Se ha configurado el viewport a 430x932 para simular un entorno móvil, tal como
 # 5. Generación de Reportes con Mochawesome
 
 El proyecto utiliza ``cypress-mochawesome-reporter`` para generar reportes interactivos en formato HTML con capturas de pantalla embebidas.
+Se ha elegido esta opcion por encima de la predeterminada de Cypress principalmente porque tienes un archivo HTML que para momentos de presentación de reportes se hace mucho más agil y ademas Mochawesome muestra los datos del resultado de manera más clara y con más funcionalidades.
 
 ### Configuración del Reporter en ``cypress.config.js``:
 
@@ -229,6 +230,9 @@ Automatizar la ejecución de pruebas en un pipeline CI/CD ayuda a:
   - Minimizar el riesgo de introducir errores en producción.
   - Facilitar el seguimiento de la calidad del software a lo largo del tiempo.
 
+> **Nota:** <br>
+En este caso en concreto podria recomendarse usar Azure DevOps ya que este proyecto se esta subido a un repositorio del mismo.
+
 ---
 
 # 8. Resumen de lo Automatizado
@@ -245,5 +249,8 @@ Automatizar la ejecución de pruebas en un pipeline CI/CD ayuda a:
   - **Configuración de Reportes:** Integración con cypress-mochawesome-reporter para generar reportes interactivos.
   - **Manejo de Errores:** Configuración de ``screenshotOnRunFailure`` y manejo global de excepciones.
   - **Configuración Móvil:** Uso de ``viewport`` para simular dispositivos móviles según lo solicitado.
+
+> **Nota:** <br>
+En el archivo fixtures que se proporcionó en el enunciado se tuvo qeu cambiar la palabra "Basic" por "Limited" ya que en la pagina web se hacia referencia a "Limited"
 
 ---
